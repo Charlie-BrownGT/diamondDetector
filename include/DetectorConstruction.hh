@@ -9,11 +9,20 @@
 #include "G4PVPlacement.hh"
 #include "G4NistManager.hh"
 
-class MyDetectorConstruction : public G4VUserDetectorConstruction
+#include "G4Material.hh"
+#include "G4GeometryManager.hh"
+#include "G4PhysicalVolumeStore.hh"
+#include "G4LogicalVolumeStore.hh"
+#include "G4SolidStore.hh"
+#include "G4UnitsTable.hh"
+#include "G4RunManager.hh"
+#include "globals.hh"
+
+class DetectorConstruction : public G4VUserDetectorConstruction
 {
 public:
-	MyDetectorConstruction();
-	~MyDetectorConstruction();
+	DetectorConstruction();
+	~DetectorConstruction();
 	
 	virtual G4VPhysicalVolume *Construct();
 	
