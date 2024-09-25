@@ -287,6 +287,9 @@ Qt5Widgets_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets
 //The directory containing a CMake configuration file for Qt5.
 Qt5_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5
 
+//Build with Geant4 UI and Vis drivers
+WITH_GEANT4_UIVIS:BOOL=ON
+
 //Path to a file.
 X11_ICE_INCLUDE_PATH:PATH=/usr/include
 

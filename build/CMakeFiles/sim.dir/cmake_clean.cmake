@@ -1,18 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/sim.dir/sim.cc.o"
   "CMakeFiles/sim.dir/sim.cc.o.d"
-  "CMakeFiles/sim.dir/src/action.cc.o"
-  "CMakeFiles/sim.dir/src/action.cc.o.d"
-  "CMakeFiles/sim.dir/src/construction.cc.o"
-  "CMakeFiles/sim.dir/src/construction.cc.o.d"
-  "CMakeFiles/sim.dir/src/detector.cc.o"
-  "CMakeFiles/sim.dir/src/detector.cc.o.d"
-  "CMakeFiles/sim.dir/src/generator.cc.o"
-  "CMakeFiles/sim.dir/src/generator.cc.o.d"
-  "CMakeFiles/sim.dir/src/physics.cc.o"
-  "CMakeFiles/sim.dir/src/physics.cc.o.d"
-  "CMakeFiles/sim.dir/src/run.cc.o"
-  "CMakeFiles/sim.dir/src/run.cc.o.d"
   "sim"
   "sim.pdb"
 )
