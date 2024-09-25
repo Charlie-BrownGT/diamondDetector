@@ -1,3 +1,5 @@
+#include <iostream>
+
 #include "G4Types.hh"
 
 #include "G4RunManagerFactory.hh"
@@ -12,7 +14,7 @@
 
 #include "DetectorConstruction.hh"
 #include "PhysicsList.hh"
-#include "ActionInitialization.hh"
+//#include "ActionInitialization.hh"
 
 int main(int argc,char** argv){
 
@@ -34,10 +36,11 @@ int main(int argc,char** argv){
 	//set the required initialization classes
 	DetectorConstruction* det = new DetectorConstruction;
 	runManager->SetUserInitialization(det);
+	runManager->Initialize();
 	
 	PhysicsList* phys = new PhysicsList;
 	runManager->SetUserInitialization(phys);
-	runManager->SetUserInitialization(new Actioninitialization(det));
+	//runManager->SetUserInitialization(new ActionInitialization(det));
 	
 	//replaced HP environmental variables with C++ calls
 	G4ParticleHPManager::GetInstance()->SetSkipMissingIsotopes( false );
@@ -56,7 +59,7 @@ int main(int argc,char** argv){
 	}
 	
 	//initialize visualization
-	G4VisManager* visManager = new G4visExecutive();
+	G4VisManager* visManager = new G4VisExecutive();
 	visManager->Initialize();
 	
 	//get the pointer to the user interface manager

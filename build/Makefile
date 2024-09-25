@@ -198,6 +198,54 @@ sim.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/sim.cc.s
 .PHONY : sim.cc.s
 
+src/DetectorConstruction.o: src/DetectorConstruction.cc.o
+.PHONY : src/DetectorConstruction.o
+
+# target to build an object file
+src/DetectorConstruction.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/DetectorConstruction.cc.o
+.PHONY : src/DetectorConstruction.cc.o
+
+src/DetectorConstruction.i: src/DetectorConstruction.cc.i
+.PHONY : src/DetectorConstruction.i
+
+# target to preprocess a source file
+src/DetectorConstruction.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/DetectorConstruction.cc.i
+.PHONY : src/DetectorConstruction.cc.i
+
+src/DetectorConstruction.s: src/DetectorConstruction.cc.s
+.PHONY : src/DetectorConstruction.s
+
+# target to generate assembly for a file
+src/DetectorConstruction.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/DetectorConstruction.cc.s
+.PHONY : src/DetectorConstruction.cc.s
+
+src/PhysicsList.o: src/PhysicsList.cc.o
+.PHONY : src/PhysicsList.o
+
+# target to build an object file
+src/PhysicsList.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/PhysicsList.cc.o
+.PHONY : src/PhysicsList.cc.o
+
+src/PhysicsList.i: src/PhysicsList.cc.i
+.PHONY : src/PhysicsList.i
+
+# target to preprocess a source file
+src/PhysicsList.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/PhysicsList.cc.i
+.PHONY : src/PhysicsList.cc.i
+
+src/PhysicsList.s: src/PhysicsList.cc.s
+.PHONY : src/PhysicsList.s
+
+# target to generate assembly for a file
+src/PhysicsList.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/PhysicsList.cc.s
+.PHONY : src/PhysicsList.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -214,6 +262,12 @@ help:
 	@echo "... sim.o"
 	@echo "... sim.i"
 	@echo "... sim.s"
+	@echo "... src/DetectorConstruction.o"
+	@echo "... src/DetectorConstruction.i"
+	@echo "... src/DetectorConstruction.s"
+	@echo "... src/PhysicsList.o"
+	@echo "... src/PhysicsList.i"
+	@echo "... src/PhysicsList.s"
 .PHONY : help
 
 
