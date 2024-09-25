@@ -3,7 +3,7 @@ This document is intended to provide a guide on the creation order that was foll
 1. CMakeLists.txt
 2. sim.cc
 3. DetectorConstruction.hh
-4. DetectorConstruction.cc
+4. DetectorConstruction.cc - requires refractivity of diamond adding
 5. PhysicsList.hh
 6. PhysicsList.cc
 7. Generator.hh
