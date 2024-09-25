@@ -1,83 +1,37 @@
 #include <iostream>
 
-#include "G4Types.hh"
-
-#include "G4RunManagerFactory.hh"
+#include "G4RunManager.hh"
 #include "G4UImanager.hh"
-#include "G4SteppingVerbose.hh"
-#include "Randomize.hh"
-
 #include "G4UIExecutive.hh"
+#include "G4VisManager.hh"
 #include "G4VisExecutive.hh"
-
-#include "G4ParticleHPManager.hh"
 
 #include "DetectorConstruction.hh"
 #include "PhysicsList.hh"
-//#include "ActionInitialization.hh"
+#include "Action.hh"
 
-int main(int argc,char** argv){
-
-	//define ui session
-	G4UIExecutive* ui = nullptr;
-	//if (argc == 1) ui = new G4UIExecutive(argc, argv);
+int main(int argc, char** argv)
+{
+	G4RunManager *runManager = new G4RunManager();
+	runManager->SetUserInitialization(new MyDetectorConstruction());
+	runManager->SetUserInitialization(new MyPhysicsList());
+	runManager->SetUserInitialization(new MyActionInitialization());
 	
-	//use G4 stepping with verbose units
-	G4int precision = 4;
-	G4SteppingVerbose::UseBestUnit(precision);
-
-	//construct the run manager
-	auto runManager = G4RunManagerFactory::CreateRunManager();
-	if (argc == 3){
-		G4int nThreads = G4UIcommand::ConvertToInt(argv[2]);
-		runManager->SetNumberOfThreads(nThreads);
-	}
-	
-	//set the required initialization classes
-	DetectorConstruction* det = new DetectorConstruction;
-	runManager->SetUserInitialization(det);
 	runManager->Initialize();
 	
-	PhysicsList* phys = new PhysicsList;
-	runManager->SetUserInitialization(phys);
-	//runManager->SetUserInitialization(new ActionInitialization(det));
-	
-	//replaced HP environmental variables with C++ calls
-	G4ParticleHPManager::GetInstance()->SetSkipMissingIsotopes( false );
-	G4ParticleHPManager::GetInstance()->SetDoNotAdjustFinalState( true );
-	G4ParticleHPManager::GetInstance()->SetUseOnlyPhotoEvaporation( true );
-	G4ParticleHPManager::GetInstance()->SetNeglectDoppler( false );
-	G4ParticleHPManager::GetInstance()->SetProduceFissionFragments( true );
-	G4ParticleHPManager::GetInstance()->SetUseWendtFissionModel( false );
-	G4ParticleHPManager::GetInstance()->SetUseNRESP71Model( false );
-	
-	//initialize visualization
-	//G4VisManager* visManager = nullptr;
-	
-	if (argc == 1){
-		ui = new G4UIExecutive(argc, argv);
-	}
-	
-	//initialize visualization
-	G4VisManager* visManager = new G4VisExecutive();
+	G4UIExecutive *ui = new G4UIExecutive(argc, argv);
+	G4VisManager *visManager = new G4VisExecutive();
 	visManager->Initialize();
-	
-	//get the pointer to the user interface manager
 	G4UImanager *UImanager = G4UImanager::GetUIpointer();
 	
-	if(ui){
-		//for interactive mode
-		UImanager->ApplyCommand("/control/execute vis.mac");
-		ui->SessionStart();
-	}
-	else {
-		//for batch mode
-		G4String command = "/control/execute ";
-		G4String fileName = argv[1];
-		UImanager->ApplyCommand(command+fileName);
-        }
+	UImanager->ApplyCommand("/vis/open OGL");
+	UImanager->ApplyCommand("/vis/drawVolume");
+	UImanager->ApplyCommand("/vis/viewer/set/viewpointVector 1 1 1");
+	UImanager->ApplyCommand("/vis/viewer/set/autoRefresh true");
+	UImanager->ApplyCommand("/vis/scene/add/trajectories smooth");
+	UImanager->ApplyCommand("/vis/scene/endOfEventAction accumulate");
 	
-	//job termination
-	delete visManager;
-	delete runManager;
+	ui->SessionStart();
+	
+	return 0;
 }
