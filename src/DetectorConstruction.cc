@@ -36,6 +36,7 @@ G4VPhysicalVolume *DetectorConstruction::Construct()
 	G4double energy[2] = {1.239841939*eV/0.9, 1.239841939*eV/0.2};
 	G4double rindexWorld[2] = {1.0, 1.0};
 	G4double rindexDiamond[2] = {2.4168, 2.4168};
+	G4double rindexCF4[2] = {1.00045, 1.00045};
 	
 	G4MaterialPropertiesTable *mptWorld = new G4MaterialPropertiesTable();
 	mptWorld->AddProperty("RINDEX", energy, rindexWorld, 2);
@@ -44,6 +45,10 @@ G4VPhysicalVolume *DetectorConstruction::Construct()
 	G4MaterialPropertiesTable *mptDiamond = new G4MaterialPropertiesTable();
 	mptDiamond->AddProperty("RINDEX", energy, rindexDiamond, 2);
 	diamond->SetMaterialPropertiesTable(mptDiamond);
+	
+	G4MaterialPropertiesTable *mptCF4 = new G4MaterialPropertiesTable();
+	mptCF4->AddProperty("RINDEX", energy, rindexCF4, 2);
+	CF4->SetMaterialPropertiesTable(mptCF4);
 	
 	G4Box *solidWorld = new G4Box("solidWorld", boxSize, boxSize, boxSize);
 	G4LogicalVolume *logicWorld = new G4LogicalVolume(solidWorld, worldMat, "logicWorld");
