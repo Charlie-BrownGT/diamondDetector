@@ -1,7 +1,7 @@
 CMakeFiles/sim.dir/src/generator.cc.o: \
- /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector2/src/generator.cc \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/src/generator.cc \
  /usr/include/stdc-predef.h \
- /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector2/include/generator.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/include/generator.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VUserPrimaryGeneratorAction.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4ParticleGun.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/globals.hh \

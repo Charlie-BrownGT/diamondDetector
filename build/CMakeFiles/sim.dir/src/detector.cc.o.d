@@ -1,7 +1,7 @@
 CMakeFiles/sim.dir/src/detector.cc.o: \
- /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector2/src/detector.cc \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/src/detector.cc \
  /usr/include/stdc-predef.h \
- /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector2/include/detector.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/include/detector.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VSensitiveDetector.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4CollectionNameVector.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/globals.hh \

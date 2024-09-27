@@ -1,7 +1,7 @@
 CMakeFiles/sim.dir/src/run.cc.o: \
- /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector2/src/run.cc \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/src/run.cc \
  /usr/include/stdc-predef.h \
- /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector2/include/run.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/include/run.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4UserRunAction.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4Types.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4GlobalConfig.hh \
