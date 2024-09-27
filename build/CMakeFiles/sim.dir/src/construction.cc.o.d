@@ -1,7 +1,7 @@
-CMakeFiles/sim.dir/src/DetectorConstruction.cc.o: \
- /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/src/DetectorConstruction.cc \
+CMakeFiles/sim.dir/src/construction.cc.o: \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector2/src/construction.cc \
  /usr/include/stdc-predef.h \
- /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/include/DetectorConstruction.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector2/include/construction.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4SystemOfUnits.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/CLHEP/Units/SystemOfUnits.h \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VUserDetectorConstruction.hh \
@@ -532,4 +532,71 @@ CMakeFiles/sim.dir/src/DetectorConstruction.cc.o: \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/rundefs.hh \
  /usr/include/c++/11/list /usr/include/c++/11/bits/stl_list.h \
  /usr/include/c++/11/bits/list.tcc \
- /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/globals.hh
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/globals.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector2/include/detector.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VSensitiveDetector.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4CollectionNameVector.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VHit.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VReadOutGeometry.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4SensitiveVolumeList.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VSDFilter.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4AnalysisManager.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4GenericAnalysisManager.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4ToolsAnalysisManager.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VAnalysisManager.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4AnalysisManagerState.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4AnalysisVerbose.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4AnalysisUtilities.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VTBaseHnManager.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4HnInformation.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4BinScheme.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4Fcn.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VAnalysisManager.icc \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4HnManager.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4BaseAnalysisManager.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4NtupleBookingManager.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/tools/ntuple_booking \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/tools/cids \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/tools/cid \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/tools/typedefs \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/tools/forit \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4NtupleBookingManager.icc \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VNtupleManager.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VFileManager.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4BaseFileManager.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VTHnFileManager.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4TH1ToolsManager.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4THnToolsManager.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4THnManager.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4THnManager.icc \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4THnMessenger.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4THnToolsManager.icc \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4THnMessenger.icc \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4Tokenizer.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4TH2ToolsManager.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4TH3ToolsManager.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4TP1ToolsManager.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4TP2ToolsManager.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/tools/histo/h1d \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/tools/histo/h1 \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/tools/histo/b1 \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/tools/histo/base_histo \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/tools/histo/histo_data \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/tools/histo/axes \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/tools/histo/axis \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/tools/eqT \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/tools/histo/h2d \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/tools/histo/h2 \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/tools/histo/b2 \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/tools/histo/h3d \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/tools/histo/h3 \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/tools/histo/b3 \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/tools/histo/p1d \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/tools/histo/p1 \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/tools/histo/profile_data \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/tools/histo/p2d \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/tools/histo/p2 \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4ToolsAnalysisManager.icc \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4GenericAnalysisManager.icc \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4GenericFileManager.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4GenericFileManager.icc

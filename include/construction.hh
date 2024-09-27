@@ -19,11 +19,13 @@
 #include "G4RunManager.hh"
 #include "globals.hh"
 
-class DetectorConstruction : public G4VUserDetectorConstruction
+#include "detector.hh"
+
+class MyDetectorConstruction : public G4VUserDetectorConstruction
 {
 public:
-	DetectorConstruction();
-	~DetectorConstruction();
+	MyDetectorConstruction();
+	~MyDetectorConstruction();
 	
 	virtual G4VPhysicalVolume *Construct();
 	

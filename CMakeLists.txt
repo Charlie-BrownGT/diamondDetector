@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16...3.17)
-project(diamondDetector)
+project(diamondDetector2)
 
 #build with ui and vis drivers on
 option(WITH_GEANT4_UIVIS "Build with Geant4 UI and Vis drivers" ON)
