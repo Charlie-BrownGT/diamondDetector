@@ -10,6 +10,7 @@
 #include "G4RunManagerFactory.hh"
 #include "G4SteppingVerbose.hh"
 #include "Randomize.hh"
+#include "G4ParticleHPManager.hh"
 
 #include "construction.hh"
 #include "physics.hh"
@@ -22,6 +23,14 @@ int main(int argc, char** argv)
 	runManager->SetUserInitialization(new MyPhysicsList());
 	runManager->SetUserInitialization(new MyActionInitialization());
 	runManager->Initialize();
+	
+	G4ParticleHPManager::GetInstance()->SetSkipMissingIsotopes( false );
+	G4ParticleHPManager::GetInstance()->SetDoNotAdjustFinalState( true );
+	G4ParticleHPManager::GetInstance()->SetUseOnlyPhotoEvaporation( true );
+	G4ParticleHPManager::GetInstance()->SetNeglectDoppler( false );
+	G4ParticleHPManager::GetInstance()->SetProduceFissionFragments( true );
+	G4ParticleHPManager::GetInstance()->SetUseWendtFissionModel( false );
+	G4ParticleHPManager::GetInstance()->SetUseNRESP71Model( false );
 	
 	G4UIExecutive *ui = 0;
 	

@@ -680,6 +680,8 @@ CMakeFiles/sim.dir/sim.cc.o: \
  /usr/include/c++/11/bits/regex_executor.tcc \
  /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4SteppingVerbose.hh \
  /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/Randomize.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4ParticleHPManager.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4ParticleHPReactionWhiteBoard.hh \
  /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/include/construction.hh \
  /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4SystemOfUnits.hh \
  /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4VUserDetectorConstruction.hh \

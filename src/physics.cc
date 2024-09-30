@@ -28,17 +28,12 @@ MyPhysicsList::MyPhysicsList()
 	//register required physics
 	RegisterPhysics ( new G4EmStandardPhysics());
 	RegisterPhysics ( new G4OpticalPhysics());
+	RegisterPhysics ( new G4HadronElasticPhysicsXS(verb));
+	RegisterPhysics ( new G4HadronPhysicsQGSP_BIC_HP(verb));
+	RegisterPhysics ( new G4IonElasticPhysics(verb));
+	RegisterPhysics ( new G4IonPhysicsXS(verb));
+	RegisterPhysics ( new G4RadioactiveDecayPhysics());
 	
-	// Hadron Elastic scattering
-	RegisterPhysics( new G4HadronElasticPhysicsXS(verb));
-	// Hadron Inelastic physics
-	RegisterPhysics( new G4HadronPhysicsQGSP_BIC_HP(verb));
-	// Ion Elastic scattering
-	RegisterPhysics( new G4IonElasticPhysics(verb));
-	// Ion Inelastic physics
-	RegisterPhysics( new G4IonPhysicsXS(verb));
-	// Radioactive decay
-	RegisterPhysics( new G4RadioactiveDecayPhysics());
 	// Gamma physics
 	//RegisterPhysics( new GammaNuclearPhysics("gamma"));
 }
@@ -48,7 +43,25 @@ MyPhysicsList::~MyPhysicsList()
 
 void MyPhysicsList::ConstructParticle()
 {
-  G4EmBuilder::ConstructMinimalEmSet();
+	G4EmBuilder::ConstructMinimalEmSet();
+
+	G4BosonConstructor  pBosonConstructor;
+	pBosonConstructor.ConstructParticle();
+
+	G4LeptonConstructor pLeptonConstructor;
+	pLeptonConstructor.ConstructParticle();
+
+	G4MesonConstructor pMesonConstructor;
+	pMesonConstructor.ConstructParticle();
+
+	G4BaryonConstructor pBaryonConstructor;
+	pBaryonConstructor.ConstructParticle();
+
+	G4IonConstructor pIonConstructor;
+	pIonConstructor.ConstructParticle();
+
+	G4ShortLivedConstructor pShortLivedConstructor;
+	pShortLivedConstructor.ConstructParticle();  
 }
 
 void MyPhysicsList::ConstructProcess()
