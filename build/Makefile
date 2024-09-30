@@ -270,6 +270,30 @@ src/detector.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/detector.cc.s
 .PHONY : src/detector.cc.s
 
+src/event.o: src/event.cc.o
+.PHONY : src/event.o
+
+# target to build an object file
+src/event.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/event.cc.o
+.PHONY : src/event.cc.o
+
+src/event.i: src/event.cc.i
+.PHONY : src/event.i
+
+# target to preprocess a source file
+src/event.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/event.cc.i
+.PHONY : src/event.cc.i
+
+src/event.s: src/event.cc.s
+.PHONY : src/event.s
+
+# target to generate assembly for a file
+src/event.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/event.cc.s
+.PHONY : src/event.cc.s
+
 src/generator.o: src/generator.cc.o
 .PHONY : src/generator.o
 
@@ -367,6 +391,9 @@ help:
 	@echo "... src/detector.o"
 	@echo "... src/detector.i"
 	@echo "... src/detector.s"
+	@echo "... src/event.o"
+	@echo "... src/event.i"
+	@echo "... src/event.s"
 	@echo "... src/generator.o"
 	@echo "... src/generator.i"
 	@echo "... src/generator.s"

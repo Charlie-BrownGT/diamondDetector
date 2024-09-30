@@ -1,11 +1,11 @@
-CMakeFiles/sim.dir/src/run.cc.o: \
- /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/src/run.cc \
+CMakeFiles/sim.dir/src/event.cc.o: \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/src/event.cc \
  /usr/include/stdc-predef.h \
- /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/include/run.hh \
- /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4UserRunAction.hh \
- /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4Types.hh \
- /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4GlobalConfig.hh \
- /usr/include/c++/11/complex \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/include/event.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4UserEventAction.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4Event.hh \
+ /usr/include/c++/11/set /usr/include/c++/11/bits/stl_tree.h \
+ /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -17,8 +17,46 @@ CMakeFiles/sim.dir/src/run.cc.o: \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
  /usr/include/c++/11/pstl/pstl_config.h \
+ /usr/include/c++/11/bits/functexcept.h \
+ /usr/include/c++/11/bits/exception_defines.h \
  /usr/include/c++/11/bits/cpp_type_traits.h \
- /usr/include/c++/11/ext/type_traits.h /usr/include/c++/11/cmath \
+ /usr/include/c++/11/ext/type_traits.h \
+ /usr/include/c++/11/ext/numeric_traits.h \
+ /usr/include/c++/11/bits/stl_pair.h /usr/include/c++/11/bits/move.h \
+ /usr/include/c++/11/type_traits \
+ /usr/include/c++/11/bits/stl_iterator_base_types.h \
+ /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
+ /usr/include/c++/11/bits/concept_check.h \
+ /usr/include/c++/11/debug/assertions.h \
+ /usr/include/c++/11/bits/stl_iterator.h \
+ /usr/include/c++/11/bits/ptr_traits.h /usr/include/c++/11/debug/debug.h \
+ /usr/include/c++/11/bits/predefined_ops.h \
+ /usr/include/c++/11/bits/allocator.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
+ /usr/include/c++/11/ext/new_allocator.h /usr/include/c++/11/new \
+ /usr/include/c++/11/bits/exception.h \
+ /usr/include/c++/11/bits/memoryfwd.h \
+ /usr/include/c++/11/bits/stl_function.h \
+ /usr/include/c++/11/backward/binders.h \
+ /usr/include/c++/11/ext/alloc_traits.h \
+ /usr/include/c++/11/bits/alloc_traits.h \
+ /usr/include/c++/11/bits/stl_construct.h \
+ /usr/include/c++/11/ext/aligned_buffer.h \
+ /usr/include/c++/11/bits/node_handle.h \
+ /usr/include/c++/11/bits/stl_set.h /usr/include/c++/11/initializer_list \
+ /usr/include/c++/11/bits/stl_multiset.h \
+ /usr/include/c++/11/bits/range_access.h \
+ /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/map \
+ /usr/include/c++/11/bits/stl_map.h /usr/include/c++/11/tuple \
+ /usr/include/c++/11/utility /usr/include/c++/11/bits/stl_relops.h \
+ /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
+ /usr/include/c++/11/bits/invoke.h \
+ /usr/include/c++/11/bits/stl_multimap.h \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/globals.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4ios.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4Types.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4GlobalConfig.hh \
+ /usr/include/c++/11/complex /usr/include/c++/11/cmath \
  /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
@@ -64,20 +102,7 @@ CMakeFiles/sim.dir/src/run.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/include/c++/11/bits/specfun.h \
- /usr/include/c++/11/bits/stl_algobase.h \
- /usr/include/c++/11/bits/functexcept.h \
- /usr/include/c++/11/bits/exception_defines.h \
- /usr/include/c++/11/ext/numeric_traits.h \
- /usr/include/c++/11/bits/stl_pair.h /usr/include/c++/11/bits/move.h \
- /usr/include/c++/11/type_traits \
- /usr/include/c++/11/bits/stl_iterator_base_types.h \
- /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
- /usr/include/c++/11/bits/concept_check.h \
- /usr/include/c++/11/debug/assertions.h \
- /usr/include/c++/11/bits/stl_iterator.h \
- /usr/include/c++/11/bits/ptr_traits.h /usr/include/c++/11/debug/debug.h \
- /usr/include/c++/11/bits/predefined_ops.h /usr/include/c++/11/limits \
+ /usr/include/c++/11/bits/specfun.h /usr/include/c++/11/limits \
  /usr/include/c++/11/tr1/gamma.tcc \
  /usr/include/c++/11/tr1/special_function_util.h \
  /usr/include/c++/11/tr1/bessel_function.tcc \
@@ -92,20 +117,18 @@ CMakeFiles/sim.dir/src/run.cc.o: \
  /usr/include/c++/11/tr1/riemann_zeta.tcc /usr/include/c++/11/sstream \
  /usr/include/c++/11/istream /usr/include/c++/11/ios \
  /usr/include/c++/11/iosfwd /usr/include/c++/11/bits/stringfwd.h \
- /usr/include/c++/11/bits/memoryfwd.h /usr/include/c++/11/bits/postypes.h \
- /usr/include/c++/11/cwchar /usr/include/wchar.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
+ /usr/include/c++/11/bits/postypes.h /usr/include/c++/11/cwchar \
+ /usr/include/wchar.h /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/c++/11/exception /usr/include/c++/11/bits/exception.h \
- /usr/include/c++/11/bits/exception_ptr.h \
+ /usr/include/c++/11/exception /usr/include/c++/11/bits/exception_ptr.h \
  /usr/include/c++/11/bits/cxxabi_init_exception.h \
  /usr/include/c++/11/typeinfo /usr/include/c++/11/bits/hash_bytes.h \
- /usr/include/c++/11/new /usr/include/c++/11/bits/nested_exception.h \
+ /usr/include/c++/11/bits/nested_exception.h \
  /usr/include/c++/11/bits/char_traits.h /usr/include/c++/11/cstdint \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
@@ -131,19 +154,9 @@ CMakeFiles/sim.dir/src/run.cc.o: \
  /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
  /usr/include/c++/11/bits/locale_classes.h /usr/include/c++/11/string \
- /usr/include/c++/11/bits/allocator.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
- /usr/include/c++/11/ext/new_allocator.h \
  /usr/include/c++/11/bits/ostream_insert.h \
  /usr/include/c++/11/bits/cxxabi_forced.h \
- /usr/include/c++/11/bits/stl_function.h \
- /usr/include/c++/11/backward/binders.h \
- /usr/include/c++/11/bits/range_access.h \
- /usr/include/c++/11/initializer_list \
- /usr/include/c++/11/bits/basic_string.h \
- /usr/include/c++/11/ext/alloc_traits.h \
- /usr/include/c++/11/bits/alloc_traits.h \
- /usr/include/c++/11/bits/stl_construct.h /usr/include/c++/11/string_view \
+ /usr/include/c++/11/bits/basic_string.h /usr/include/c++/11/string_view \
  /usr/include/c++/11/bits/functional_hash.h \
  /usr/include/c++/11/bits/string_view.tcc \
  /usr/include/c++/11/ext/string_conversions.h /usr/include/c++/11/cstdlib \
@@ -177,34 +190,19 @@ CMakeFiles/sim.dir/src/run.cc.o: \
  /usr/include/c++/11/bits/istream.tcc \
  /usr/include/c++/11/bits/sstream.tcc \
  /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/tls.hh \
- /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4AnalysisManager.hh \
- /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4GenericAnalysisManager.hh \
- /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4ToolsAnalysisManager.hh \
- /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4VAnalysisManager.hh \
- /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4AnalysisManagerState.hh \
- /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4AnalysisVerbose.hh \
- /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/globals.hh \
- /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4ios.hh \
  /usr/include/c++/11/iostream /usr/include/c++/11/algorithm \
- /usr/include/c++/11/utility /usr/include/c++/11/bits/stl_relops.h \
  /usr/include/c++/11/bits/stl_algo.h \
  /usr/include/c++/11/bits/algorithmfwd.h \
  /usr/include/c++/11/bits/stl_heap.h \
  /usr/include/c++/11/bits/stl_tempbuf.h \
  /usr/include/c++/11/bits/uniform_int_dist.h \
  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
- /usr/include/c++/11/functional /usr/include/c++/11/tuple \
- /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
- /usr/include/c++/11/bits/invoke.h /usr/include/c++/11/bits/refwrap.h \
+ /usr/include/c++/11/functional /usr/include/c++/11/bits/refwrap.h \
  /usr/include/c++/11/bits/std_function.h \
- /usr/include/c++/11/unordered_map \
- /usr/include/c++/11/ext/aligned_buffer.h \
- /usr/include/c++/11/bits/hashtable.h \
+ /usr/include/c++/11/unordered_map /usr/include/c++/11/bits/hashtable.h \
  /usr/include/c++/11/bits/hashtable_policy.h \
  /usr/include/c++/11/bits/enable_special_members.h \
- /usr/include/c++/11/bits/node_handle.h \
- /usr/include/c++/11/bits/unordered_map.h \
- /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/vector \
+ /usr/include/c++/11/bits/unordered_map.h /usr/include/c++/11/vector \
  /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
@@ -234,13 +232,40 @@ CMakeFiles/sim.dir/src/run.cc.o: \
  /usr/include/c++/11/bits/locale_facets_nonio.tcc \
  /usr/include/c++/11/bits/locale_conv.h \
  /usr/include/c++/11/bits/unique_ptr.h \
- /usr/include/c++/11/bits/quoted_string.h /usr/include/c++/11/map \
- /usr/include/c++/11/bits/stl_tree.h /usr/include/c++/11/bits/stl_map.h \
- /usr/include/c++/11/bits/stl_multimap.h /usr/include/c++/11/mutex \
+ /usr/include/c++/11/bits/quoted_string.h /usr/include/c++/11/mutex \
  /usr/include/c++/11/chrono /usr/include/c++/11/ratio \
  /usr/include/c++/11/bits/parse_numbers.h \
  /usr/include/c++/11/bits/std_mutex.h \
  /usr/include/c++/11/bits/unique_lock.h \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/evtdefs.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4Allocator.hh \
+ /usr/include/c++/11/cstddef \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4AllocatorPool.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4PrimaryVertex.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4PrimaryParticle.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4ThreeVector.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/CLHEP/Vector/ThreeVector.h \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/CLHEP/Utility/defs.h \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/CLHEP/Vector/ThreeVector.icc \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/pwdefs.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4HCofThisEvent.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4VHitsCollection.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4DCofThisEvent.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4VDigiCollection.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4TrajectoryContainer.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4VTrajectory.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4VUserEventInformation.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4Profiler.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4Profiler.icc \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/PTL/Globals.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/PTL/Types.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/PTL/Utility.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4AnalysisManager.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4GenericAnalysisManager.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4ToolsAnalysisManager.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4VAnalysisManager.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4AnalysisManagerState.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4AnalysisVerbose.hh \
  /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4Threading.hh \
  /usr/include/c++/11/condition_variable \
  /usr/include/c++/11/bits/shared_ptr.h \
@@ -269,8 +294,6 @@ CMakeFiles/sim.dir/src/run.cc.o: \
  /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4VAnalysisManager.icc \
  /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4HnManager.hh \
  /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4BaseAnalysisManager.hh \
- /usr/include/c++/11/set /usr/include/c++/11/bits/stl_set.h \
- /usr/include/c++/11/bits/stl_multiset.h \
  /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4NtupleBookingManager.hh \
  /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/tools/ntuple_booking \
  /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/tools/cids \
@@ -292,10 +315,6 @@ CMakeFiles/sim.dir/src/run.cc.o: \
  /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4UIdirectory.hh \
  /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4UIcommand.hh \
  /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4ApplicationState.hh \
- /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4ThreeVector.hh \
- /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/CLHEP/Vector/ThreeVector.h \
- /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/CLHEP/Utility/defs.h \
- /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/CLHEP/Vector/ThreeVector.icc \
  /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4UIparameter.hh \
  /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4UItokenNum.hh \
  /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4THnToolsManager.icc \
@@ -328,10 +347,6 @@ CMakeFiles/sim.dir/src/run.cc.o: \
  /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4GenericAnalysisManager.icc \
  /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4GenericFileManager.hh \
  /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4GenericFileManager.icc \
- /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4Run.hh \
- /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4Profiler.hh \
- /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4Profiler.icc \
- /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/PTL/Globals.hh \
- /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/PTL/Types.hh \
- /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/PTL/Utility.hh \
- /usr/include/c++/11/cstddef
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/include/run.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4UserRunAction.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4Run.hh

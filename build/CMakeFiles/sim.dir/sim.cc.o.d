@@ -1036,4 +1036,7 @@ CMakeFiles/sim.dir/sim.cc.o: \
  /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4GeneralParticleSourceMessenger.hh \
  /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4GeneralParticleSourceData.hh \
  /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/include/run.hh \
- /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4UserRunAction.hh
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4UserRunAction.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4Run.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/include/event.hh \
+ /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/include/Geant4/G4UserEventAction.hh

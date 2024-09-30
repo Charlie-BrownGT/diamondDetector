@@ -10,6 +10,10 @@ MyRunAction::MyRunAction()
 	man->CreateNtupleDColumn("Y");
 	man->CreateNtupleDColumn("Z");
 	man->FinishNtuple(0);
+	
+	man->CreateNtuple("Energy", "Energy");
+	man->CreateNtupleDColumn("fEdep");
+	man->FinishNtuple(1);
 }
 
 MyRunAction::~MyRunAction()
@@ -18,7 +22,7 @@ MyRunAction::~MyRunAction()
 void MyRunAction::BeginOfRunAction(const G4Run*)
 {
 	G4AnalysisManager *man = G4AnalysisManager::Instance();
-	man->OpenFile("position.root");
+	man->OpenFile("results.root");
 }
 
 void MyRunAction::EndOfRunAction(const G4Run*)
