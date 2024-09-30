@@ -38,6 +38,7 @@ int main(int argc, char** argv)
 	if(ui)
 	{	
 		UImanager->ApplyCommand("/control/execute visualization.mac");
+		UImanager->ApplyCommand("/control/execute beam.mac");
 		ui->SessionStart();
 	}
 	else 

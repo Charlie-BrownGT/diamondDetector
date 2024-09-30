@@ -2,43 +2,50 @@
 
 MyPrimaryGenerator::MyPrimaryGenerator()
 {
-	G4int n_particle = 1;
+	particleGun = new G4GeneralParticleSource();
+	//G4int n_particle = 1;
 	//fParticleGun = new G4ParticleGun(n_particle);
-	
-	fParticleSource = new G4GeneralParticleSource();
-	
-	G4ParticleTable *particleTable = G4ParticleTable::GetParticleTable();
-	G4ParticleDefinition *particle = particleTable->FindParticle("chargedgeantino");
-
+	//G4ParticleTable *particleTable = G4ParticleTable::GetParticleTable();
+	//G4ParticleDefinition *particle = particleTable->FindParticle("chargedgeantino");
 	//fParticleGun->SetParticleDefinition(particle);
-	fParticleSource->SetParticleDefinition(particle);
+	//fParticleSource->SetParticleDefinition(particle);
 }
 
 MyPrimaryGenerator::~MyPrimaryGenerator()
 {
+	delete particleGun;
 	//delete fParticleGun;
-	delete fParticleSource;
 }
 
-void MyPrimaryGenerator::GeneratePrimaries(G4Event *anEvent)
+void MyPrimaryGenerator::GeneratePrimaries(G4Event* anEvent)
 {
+	particleGun -> GeneratePrimaryVertex(anEvent);
 	//G4ParticleDefinition* particle = fParticleGun->GetParticleDefinition();
-	G4ParticleDefinition* particle = fParticleSource->GetParticleDefinition();
+	//G4ParticleDefinition* particle = fParticleSource->GetParticleDefinition();
 
-	if (particle == G4ChargedGeantino::ChargedGeantino()) 
-	{  
-		G4int Z = 11, A = 21;
-		G4double ionCharge = 11.*eplus;
-		G4double excitEnergy = 0.*keV;
-		G4ThreeVector pos(0.,0.,-0.25*m);
-		G4ThreeVector mom(0.,0.,1.);
-		G4double energy = 5.*MeV;
+	//if (particle == G4ChargedGeantino::ChargedGeantino()) 
+	//{  
+		//G4int Z = 11, A = 21;
+		//G4double ionCharge = 11.*eplus;
+		//G4double excitEnergy = 0.*keV;
+		//G4ThreeVector pos(0.,0.,-0.25*m);
+		//G4ThreeVector mom(0.,0.,1.);
+		//G4double energy = 5.*MeV;
 		
-		fParticleSource->SetParticleDefinition(G4IonTable::GetIonTable()->GetIon(Z,A,excitEnergy));
-		fParticleSource->GetCurrentSource()->GetEneDist()->SetMonoEnergy(energy);
-		fParticleSource->GetCurrentSource()->GetPosDist()->SetPosDisType("Point");
-		fParticleSource->GetCurrentSource()->GetPosDist()->SetCentreCoords(G4ThreeVector(pos));
-		fParticleSource->GetCurrentSource()->GetAngDist()->SetAngDistType("iso");
+		//fParticleSource->SetParticleDefinition(G4IonTable::GetIonTable()->GetIon(Z,A,excitEnergy));
+		//fParticleSource->GetCurrentSource()->GetEneDist()->SetMonoEnergy(gauss);
+		//fParticleSource->GetCurrentSource()->GetPosDist()->SetPosDisType("Point");
+		//fParticleSource->GetCurrentSource()->GetPosDist()->SetCentreCoords(G4ThreeVector(pos));
+		//fParticleSource->GetCurrentSource()->GetAngDist()->SetAngDistType("sin");
+		//fParticleSource->GetCurrentSource()->GetAngDist()->SetParticleMomentumDirection(G4ThreeVector(0.,0.,1.));
+		
+		//fParticleSource->GetCurrentSource()->GetAngDist()->SetMinTheta(0.0);
+		//fParticleSource->GetCurrentSource()->GetAngDist()->SetMaxTheta(90.0 * deg);
+		//fParticleSource->GetCurrentSource()->GetAngDist()->SetMinPhi(0.0);
+		//fParticleSource->GetCurrentSource()->GetAngDist()->SetMaxPhi(360.0 * deg);
+		//fParticleSource->GetCurrentSource()->GetAngDist()->SetSigmaTheta(0.1 * deg);
+		//fParticleSource->GetCurrentSource()->GetAngDist()->SetSigmaPhi(0.1 * deg);
+
 		
 		//G4ParticleDefinition* ion = G4IonTable::GetIonTable()->GetIon(Z,A,excitEnergy);
 		//fParticleGun->SetParticleEnergy(energy);
@@ -52,8 +59,9 @@ void MyPrimaryGenerator::GeneratePrimaries(G4Event *anEvent)
 		//fParticleSource->GetParticleMomentumDirection();
 		//fParticleSource->SetParticleDefinition(ion);
 		//fParticleSource->SetParticleCharge(ionCharge);
-  	}   
+  	//}   
   	
   	//fParticleGun->GeneratePrimaryVertex(anEvent);
-  	fParticleSource->GeneratePrimaryVertex(anEvent);
+  	//fParticleSource->GeneratePrimaryVertex(anEvent);
+  	
 }
