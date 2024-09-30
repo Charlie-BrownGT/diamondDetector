@@ -20,31 +20,15 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	G4Material *diamond = new G4Material("diamond", 3.515*g/cm3, 1);
 	G4Material *CF4 = new G4Material("C4F", 88*g/mole, 2);
 	
-	//G4Material *SiO2 = new G4Material("SiO2", 2.201*g/cm3, 2);
-	//G4Material *H2O = new G4Material("H2O", 1.000*g/cm3, 2);
-	//G4Material *Aerogel = new G4Material("Aerogel", 0.200*g/cm3, 3);
-	
-	//G4Material* test  = nist->FindOrBuildMaterial("G4_CARBON_TETRACHLORIDE");
-	
 	//add elements to materials used
 	diamond->AddElement(nist->FindOrBuildElement("C"), 4);
 	CF4->AddElement(nist->FindOrBuildElement("C"), 1);
 	CF4->AddElement(nist->FindOrBuildElement("C"), 4);
 	
-	//SiO2->AddElement(nist->FindOrBuildElement("Si"), 1);
-	//SiO2->AddElement(nist->FindOrBuildElement("O"), 2);
-	//H2O->AddElement(nist->FindOrBuildElement("H"), 2);
-	//H2O->AddElement(nist->FindOrBuildElement("O"), 1);
-	
-	//Aerogel->AddMaterial(SiO2, 62.5*perCent);
-	//Aerogel->AddMaterial(H2O, 37.4*perCent);
-	//Aerogel->AddElement(C, 0.1*perCent);
-	
 	//define variables of volumes
 	G4double boxSize = 0.5*m;
 	G4double energy[2] = {1.239841939*eV/0.9, 1.239841939*eV/0.2};
-	//G4double rindexWorld[2] = {1.0, 1.0};
-	G4double rindexWorld[2] = {1.78, 1.78};
+	G4double rindexWorld[2] = {1.0, 1.0};
 	 
 	G4double diamondX = 4.5*mm;
 	G4double diamondY = 4.5*mm;
@@ -58,7 +42,6 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	
 	G4double rindexDiamond[2] = {2.4168, 2.4168};
 	G4double rindexCF4[2] = {1.00045, 1.00045};
-	//G4double rindexAerogel[2] = {1.1, 1.1};
 	
 	//define material property tables 
 	G4MaterialPropertiesTable *mptWorld = new G4MaterialPropertiesTable();
