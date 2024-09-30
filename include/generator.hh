@@ -22,16 +22,10 @@ class MyPrimaryGenerator : public G4VUserPrimaryGeneratorAction
 public:
         MyPrimaryGenerator();
         ~MyPrimaryGenerator();
-
-        //void GeneratePrimaries(G4Event*);
-        //G4ParticleGun* GetParticleGun() { return fParticleGun;} ;
         
         void GeneratePrimaries(G4Event* anEvent);
-        //G4GeneralParticleSource* GetGeneralParticleSource() { return fParticleSource;} ;
 
 private:
-	//G4ParticleGun*  fParticleGun;
-	//G4GeneralParticleSource* fParticleSource;
 	G4GeneralParticleSource* particleGun;
 };
 #endif
