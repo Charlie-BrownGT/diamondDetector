@@ -10,9 +10,6 @@
 #include "G4IonPhysicsXS.hh"
 
 #include "G4RadioactiveDecayPhysics.hh"
-//#include "GammaNuclearPhysicsLEND.hh"
-//#include "GammaNuclearPhysics.hh"
-
 #include "G4VUserPhysicsList.hh"
 #include "G4UnitsTable.hh"
 #include "G4ParticleTypes.hh"
@@ -46,7 +43,6 @@ public:
 	~MyPhysicsList();
 	
 protected:
-	void ConstructParticle();
     	void ConstructProcess();
 };
 #endif

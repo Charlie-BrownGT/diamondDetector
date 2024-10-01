@@ -23,7 +23,7 @@ public:
         MyPrimaryGenerator();
         ~MyPrimaryGenerator();
         
-        void GeneratePrimaries(G4Event* anEvent);
+        void GeneratePrimaries(G4Event*);
 
 private:
 	G4GeneralParticleSource* particleGun;

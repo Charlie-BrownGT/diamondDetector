@@ -19,4 +19,4 @@
 /gps/ang/rot1 0 1 0
 /gps/ang/rot2 1 0 0
 /gps/ang/type beam1d
-/gps/ang/sigma_r 5. deg
+/gps/ang/sigma_r 0. deg
