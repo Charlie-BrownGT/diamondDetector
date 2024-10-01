@@ -6,12 +6,6 @@
 #include "G4VisManager.hh"
 #include "G4VisExecutive.hh"
 
-#include "G4Types.hh"
-#include "G4RunManagerFactory.hh"
-#include "G4SteppingVerbose.hh"
-#include "Randomize.hh"
-#include "G4ParticleHPManager.hh"
-
 #include "construction.hh"
 #include "physics.hh"
 #include "action.hh"
@@ -22,34 +16,18 @@ int main(int argc, char** argv)
 	runManager->SetUserInitialization(new MyDetectorConstruction());
 	runManager->SetUserInitialization(new MyPhysicsList());
 	runManager->SetUserInitialization(new MyActionInitialization());
+	
 	runManager->Initialize();
 	
-	G4UIExecutive *ui = 0;
-	
-	if(argc == 1)
-	{
-		ui = new G4UIExecutive(argc, argv);
-	}
-	
+	G4UIExecutive *ui = new G4UIExecutive(argc, argv);
 	G4VisManager *visManager = new G4VisExecutive();
 	visManager->Initialize();
-	
 	G4UImanager *UImanager = G4UImanager::GetUIpointer();
 	
-	if(ui)
-	{	
-		UImanager->ApplyCommand("/control/execute visualization.mac");
-		UImanager->ApplyCommand("/control/execute beam.mac");
-		ui->SessionStart();
-	}
-	else 
-	{
-		G4String command = "/control/execute ";
-		G4String fileName = argv[1];
-		UImanager->ApplyCommand(command+fileName);
-	}
+	UImanager->ApplyCommand("/control/execute visualization.mac");
+	UImanager->ApplyCommand("/control/execute beam.mac");
 	
-	delete ui;
-	delete runManager;
-	delete visManager;
+	ui->SessionStart();
+	
+	return 0;
 }

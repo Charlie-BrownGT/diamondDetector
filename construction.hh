@@ -10,15 +10,6 @@
 #include "G4PVPlacement.hh"
 #include "G4NistManager.hh"
 
-#include "G4Material.hh"
-#include "G4GeometryManager.hh"
-#include "G4PhysicalVolumeStore.hh"
-#include "G4LogicalVolumeStore.hh"
-#include "G4SolidStore.hh"
-#include "G4UnitsTable.hh"
-#include "G4RunManager.hh"
-#include "globals.hh"
-
 #include "detector.hh"
 
 class MyDetectorConstruction : public G4VUserDetectorConstruction
