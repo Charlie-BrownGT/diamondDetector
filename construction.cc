@@ -56,6 +56,8 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 
 void MyDetectorConstruction::ConstructSDandField()
 {
+	//varying detector usage here, then changing the root output file name in run.cc	
+	
 	//MySensitiveDetector *sensSD = new MySensitiveDetector("SiliconDetector");
 	//logicSD->SetSensitiveDetector(sensSD);
 	
