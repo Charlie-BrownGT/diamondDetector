@@ -18,7 +18,7 @@ MyRunAction::~MyRunAction()
 void MyRunAction::BeginOfRunAction(const G4Run*)
 {
 	G4AnalysisManager *man = G4AnalysisManager::Instance();
-	man->OpenFile("SD+DDresults.root");
+	man->OpenFile("DD-30cm_ID25cm_beam-45cm_DD.root");
 }
 
 void MyRunAction::EndOfRunAction(const G4Run*)

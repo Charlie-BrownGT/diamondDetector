@@ -14,8 +14,6 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	G4double density = 1.e-25*g/cm3, pressure = 1.e-5*pascal, temperature = 2.73 * kelvin;
 	  
 	G4Material *vacuum = new G4Material("Vacuum", z=1., a=1.008 * g/mole, density, kStateGas, temperature, pressure);
-	G4Material *lead = nist->FindOrBuildMaterial("G4_Pb");
-	G4Material *worldMat = nist->FindOrBuildMaterial("G4_AIR");
 	
 	G4Element* C  = new G4Element("Carbon","C" , 6., 12.00*g/mole);
 	G4Element* F  = new G4Element("Flourine","F" , 9., 38.00*g/mole);
@@ -29,7 +27,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	
 	G4double boxSize = 0.5*m; 
 	G4double diamondX = 4.5*mm, diamondY = 4.5*mm, diamondZ = 0.5*mm;
-	G4double innerRadius = 0*cm, outerRadius = 5*cm, hz = 15*cm, startAngle = 0.*deg, spanningAngle = 360.*deg;
+	G4double innerRadius = 0*cm, outerRadius = 15*cm, hz = 15*cm, startAngle = 0.*deg, spanningAngle = 360.*deg;
 	
 	G4Box *solidWorld = new G4Box("solidWorld", 0.5*m, 0.5*m, 0.5*m);
 	G4LogicalVolume *logicWorld = new G4LogicalVolume(solidWorld, vacuum, "logicWorld");
@@ -37,7 +35,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	
 	G4Box *solidDD = new G4Box("solidDD", diamondX, diamondY, diamondZ);
 	logicDD = new G4LogicalVolume(solidDD, diamond, "logicDD");
-	G4VPhysicalVolume *physDD = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.05*m), logicDD, "physDD", logicWorld, false, 0, true);
+	G4VPhysicalVolume *physDD = new G4PVPlacement(0, G4ThreeVector(0., 0., -30*cm), logicDD, "physDD", logicWorld, false, 0, true);
 	
 	G4Tubs *solidID = new G4Tubs("solidID", innerRadius, outerRadius, hz, startAngle, spanningAngle);      
 	logicID = new G4LogicalVolume(solidID, CF4, "logicID");
@@ -58,8 +56,8 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 
 void MyDetectorConstruction::ConstructSDandField()
 {
-	MySensitiveDetector *sensSD = new MySensitiveDetector("SiliconDetector");
-	logicSD->SetSensitiveDetector(sensSD);
+	//MySensitiveDetector *sensSD = new MySensitiveDetector("SiliconDetector");
+	//logicSD->SetSensitiveDetector(sensSD);
 	
 	//MySensitiveDetector *sensID = new MySensitiveDetector("ICDetector");
 	//logicID->SetSensitiveDetector(sensID);

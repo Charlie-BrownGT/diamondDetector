@@ -2,7 +2,7 @@
 /gps/particle ion
 /gps/energy 80 MeV
 /gps/ion 11 21 11 0
-/gps/pos/centre 0 0 -0.45 m 
+/gps/pos/centre 0 0 -45 cm 
 /gps/direction 0 0 1
 
 #set beam qualities, option left in for a circuar beam origin type
