@@ -35,21 +35,21 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	G4LogicalVolume *logicWorld = new G4LogicalVolume(solidWorld, vacuum, "logicWorld");
 	G4VPhysicalVolume *physWorld = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicWorld, "physWorld", 0, false, 0, true);
 	
-	G4Box *solidDiamond = new G4Box("solidDiamond", diamondX, diamondY, diamondZ);
-	G4LogicalVolume *logicDiamond = new G4LogicalVolume(solidDiamond, diamond, "logicDiamond");
-	G4VPhysicalVolume *physDiamond = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.05*m), logicDiamond, "physDiamond", logicWorld, false, 0, true);
+	G4Box *solidDD = new G4Box("solidDD", diamondX, diamondY, diamondZ);
+	logicDD = new G4LogicalVolume(solidDD, diamond, "logicDD");
+	G4VPhysicalVolume *physDD = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.05*m), logicDD, "physDD", logicWorld, false, 0, true);
 	
-	G4Tubs *solidITub = new G4Tubs("solidITub", innerRadius, outerRadius, hz, startAngle, spanningAngle);      
-	G4LogicalVolume *logicITub = new G4LogicalVolume(solidITub, CF4, "logicITub");
-	G4VPhysicalVolume *physITub = new G4PVPlacement(0, G4ThreeVector(0, 0, 0.25*m), logicITub, "physITub", logicWorld, false, 0);
+	G4Tubs *solidID = new G4Tubs("solidID", innerRadius, outerRadius, hz, startAngle, spanningAngle);      
+	logicID = new G4LogicalVolume(solidID, CF4, "logicID");
+	G4VPhysicalVolume *physID = new G4PVPlacement(0, G4ThreeVector(0, 0, 0.25*m), logicID, "physID", logicWorld, false, 0);
 	
-	G4Box *solidDetector = new G4Box("solidDetector", 0.05*m, 0.05*m, 0.01*m);
-	logicDetector = new G4LogicalVolume(solidDetector, vacuum, "logicDetector");
+	G4Box *solidSD = new G4Box("solidSD", 0.05*m, 0.05*m, 0.01*m);
+	logicSD = new G4LogicalVolume(solidSD, vacuum, "logicSD");
 	for(G4int i = 0; i < 10; i++)
 	{
 		for(G4int j = 0; j < 10; j++)
 		{
-			G4VPhysicalVolume *physDetector = new G4PVPlacement(0, G4ThreeVector(-0.5*m+(i+0.5)*m/10, -0.5*m+(j+0.5)*m/10, 0.49*m), logicDetector, "physDetector", logicWorld, false, j+i*10, false);
+			G4VPhysicalVolume *physSD = new G4PVPlacement(0, G4ThreeVector(-0.5*m+(i+0.5)*m/10, -0.5*m+(j+0.5)*m/10, 0.49*m), logicSD, "physSD", logicWorld, false, j+i*10, false);
 		}
 	}
 		
@@ -58,6 +58,12 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 
 void MyDetectorConstruction::ConstructSDandField()
 {
-	MySensitiveDetector *sensDet = new MySensitiveDetector("SensitiveDetector");
-	logicDetector->SetSensitiveDetector(sensDet);
+	MySensitiveDetector *sensSD = new MySensitiveDetector("SiliconDetector");
+	logicSD->SetSensitiveDetector(sensSD);
+	
+	//MySensitiveDetector *sensID = new MySensitiveDetector("ICDetector");
+	//logicID->SetSensitiveDetector(sensID);
+	
+	MySensitiveDetector *sensDD = new MySensitiveDetector("DiamondDetector");
+	logicDD->SetSensitiveDetector(sensDD);
 }

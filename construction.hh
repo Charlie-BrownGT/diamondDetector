@@ -21,7 +21,9 @@ public:
 	virtual G4VPhysicalVolume *Construct();
 	
 private:
-	G4LogicalVolume *logicDetector;
+	G4LogicalVolume *logicSD;
+	G4LogicalVolume *logicID;
+	G4LogicalVolume *logicDD;
 	virtual void ConstructSDandField();
 };
 #endif
