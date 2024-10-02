@@ -1,0 +1,9 @@
+Things to do: 
+
+Simplify the detector selection process by introducing if statements in the detector function. 
+Automate the name generation process by using variables in the detector construction, then reading them together into the file name within run.cc.
+Re-order the variable order to make changing the detector setup easy. 
+Investigate which detector construction variables can be changed with a user defined message (suspect beam, construction may be more difficult).
+Potentially write the file names into a folder for ingestion into the analysis macro. 
+
+Not before producing counts as a function of either angle or spatial distribution. 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector
+# Install script for directory: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

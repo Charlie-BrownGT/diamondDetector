@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector
+CMAKE_SOURCE_DIR = /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/build
+CMAKE_BINARY_DIR = /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/sim.dir/depend.make
@@ -72,100 +72,100 @@ include CMakeFiles/sim.dir/flags.make
 CMakeFiles/sim.dir/sim.cc.o: CMakeFiles/sim.dir/flags.make
 CMakeFiles/sim.dir/sim.cc.o: ../sim.cc
 CMakeFiles/sim.dir/sim.cc.o: CMakeFiles/sim.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sim.dir/sim.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim.dir/sim.cc.o -MF CMakeFiles/sim.dir/sim.cc.o.d -o CMakeFiles/sim.dir/sim.cc.o -c /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/sim.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sim.dir/sim.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim.dir/sim.cc.o -MF CMakeFiles/sim.dir/sim.cc.o.d -o CMakeFiles/sim.dir/sim.cc.o -c /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/sim.cc
 
 CMakeFiles/sim.dir/sim.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sim.dir/sim.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/sim.cc > CMakeFiles/sim.dir/sim.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/sim.cc > CMakeFiles/sim.dir/sim.cc.i
 
 CMakeFiles/sim.dir/sim.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sim.dir/sim.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/sim.cc -o CMakeFiles/sim.dir/sim.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/sim.cc -o CMakeFiles/sim.dir/sim.cc.s
 
 CMakeFiles/sim.dir/action.cc.o: CMakeFiles/sim.dir/flags.make
 CMakeFiles/sim.dir/action.cc.o: ../action.cc
 CMakeFiles/sim.dir/action.cc.o: CMakeFiles/sim.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sim.dir/action.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim.dir/action.cc.o -MF CMakeFiles/sim.dir/action.cc.o.d -o CMakeFiles/sim.dir/action.cc.o -c /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/action.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sim.dir/action.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim.dir/action.cc.o -MF CMakeFiles/sim.dir/action.cc.o.d -o CMakeFiles/sim.dir/action.cc.o -c /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/action.cc
 
 CMakeFiles/sim.dir/action.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sim.dir/action.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/action.cc > CMakeFiles/sim.dir/action.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/action.cc > CMakeFiles/sim.dir/action.cc.i
 
 CMakeFiles/sim.dir/action.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sim.dir/action.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/action.cc -o CMakeFiles/sim.dir/action.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/action.cc -o CMakeFiles/sim.dir/action.cc.s
 
 CMakeFiles/sim.dir/construction.cc.o: CMakeFiles/sim.dir/flags.make
 CMakeFiles/sim.dir/construction.cc.o: ../construction.cc
 CMakeFiles/sim.dir/construction.cc.o: CMakeFiles/sim.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/sim.dir/construction.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim.dir/construction.cc.o -MF CMakeFiles/sim.dir/construction.cc.o.d -o CMakeFiles/sim.dir/construction.cc.o -c /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/construction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/sim.dir/construction.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim.dir/construction.cc.o -MF CMakeFiles/sim.dir/construction.cc.o.d -o CMakeFiles/sim.dir/construction.cc.o -c /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/construction.cc
 
 CMakeFiles/sim.dir/construction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sim.dir/construction.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/construction.cc > CMakeFiles/sim.dir/construction.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/construction.cc > CMakeFiles/sim.dir/construction.cc.i
 
 CMakeFiles/sim.dir/construction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sim.dir/construction.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/construction.cc -o CMakeFiles/sim.dir/construction.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/construction.cc -o CMakeFiles/sim.dir/construction.cc.s
 
 CMakeFiles/sim.dir/detector.cc.o: CMakeFiles/sim.dir/flags.make
 CMakeFiles/sim.dir/detector.cc.o: ../detector.cc
 CMakeFiles/sim.dir/detector.cc.o: CMakeFiles/sim.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/sim.dir/detector.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim.dir/detector.cc.o -MF CMakeFiles/sim.dir/detector.cc.o.d -o CMakeFiles/sim.dir/detector.cc.o -c /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/detector.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/sim.dir/detector.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim.dir/detector.cc.o -MF CMakeFiles/sim.dir/detector.cc.o.d -o CMakeFiles/sim.dir/detector.cc.o -c /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/detector.cc
 
 CMakeFiles/sim.dir/detector.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sim.dir/detector.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/detector.cc > CMakeFiles/sim.dir/detector.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/detector.cc > CMakeFiles/sim.dir/detector.cc.i
 
 CMakeFiles/sim.dir/detector.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sim.dir/detector.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/detector.cc -o CMakeFiles/sim.dir/detector.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/detector.cc -o CMakeFiles/sim.dir/detector.cc.s
 
 CMakeFiles/sim.dir/generator.cc.o: CMakeFiles/sim.dir/flags.make
 CMakeFiles/sim.dir/generator.cc.o: ../generator.cc
 CMakeFiles/sim.dir/generator.cc.o: CMakeFiles/sim.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/sim.dir/generator.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim.dir/generator.cc.o -MF CMakeFiles/sim.dir/generator.cc.o.d -o CMakeFiles/sim.dir/generator.cc.o -c /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/generator.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/sim.dir/generator.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim.dir/generator.cc.o -MF CMakeFiles/sim.dir/generator.cc.o.d -o CMakeFiles/sim.dir/generator.cc.o -c /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/generator.cc
 
 CMakeFiles/sim.dir/generator.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sim.dir/generator.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/generator.cc > CMakeFiles/sim.dir/generator.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/generator.cc > CMakeFiles/sim.dir/generator.cc.i
 
 CMakeFiles/sim.dir/generator.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sim.dir/generator.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/generator.cc -o CMakeFiles/sim.dir/generator.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/generator.cc -o CMakeFiles/sim.dir/generator.cc.s
 
 CMakeFiles/sim.dir/physics.cc.o: CMakeFiles/sim.dir/flags.make
 CMakeFiles/sim.dir/physics.cc.o: ../physics.cc
 CMakeFiles/sim.dir/physics.cc.o: CMakeFiles/sim.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/sim.dir/physics.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim.dir/physics.cc.o -MF CMakeFiles/sim.dir/physics.cc.o.d -o CMakeFiles/sim.dir/physics.cc.o -c /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/physics.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/sim.dir/physics.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim.dir/physics.cc.o -MF CMakeFiles/sim.dir/physics.cc.o.d -o CMakeFiles/sim.dir/physics.cc.o -c /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/physics.cc
 
 CMakeFiles/sim.dir/physics.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sim.dir/physics.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/physics.cc > CMakeFiles/sim.dir/physics.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/physics.cc > CMakeFiles/sim.dir/physics.cc.i
 
 CMakeFiles/sim.dir/physics.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sim.dir/physics.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/physics.cc -o CMakeFiles/sim.dir/physics.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/physics.cc -o CMakeFiles/sim.dir/physics.cc.s
 
 CMakeFiles/sim.dir/run.cc.o: CMakeFiles/sim.dir/flags.make
 CMakeFiles/sim.dir/run.cc.o: ../run.cc
 CMakeFiles/sim.dir/run.cc.o: CMakeFiles/sim.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/sim.dir/run.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim.dir/run.cc.o -MF CMakeFiles/sim.dir/run.cc.o.d -o CMakeFiles/sim.dir/run.cc.o -c /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/run.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/sim.dir/run.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sim.dir/run.cc.o -MF CMakeFiles/sim.dir/run.cc.o.d -o CMakeFiles/sim.dir/run.cc.o -c /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/run.cc
 
 CMakeFiles/sim.dir/run.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sim.dir/run.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/run.cc > CMakeFiles/sim.dir/run.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/run.cc > CMakeFiles/sim.dir/run.cc.i
 
 CMakeFiles/sim.dir/run.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sim.dir/run.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/run.cc -o CMakeFiles/sim.dir/run.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/run.cc -o CMakeFiles/sim.dir/run.cc.s
 
 # Object files for target sim
 sim_OBJECTS = \
@@ -188,49 +188,49 @@ sim: CMakeFiles/sim.dir/generator.cc.o
 sim: CMakeFiles/sim.dir/physics.cc.o
 sim: CMakeFiles/sim.dir/run.cc.o
 sim: CMakeFiles/sim.dir/build.make
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4Tree.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4FR.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4GMocren.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4visHepRep.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4RayTracer.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4VRML.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4ToolsSG.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4OpenGL.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4vis_management.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4modeling.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4interfaces.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4mctruth.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4geomtext.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4gdml.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4error_propagation.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4readout.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4physicslists.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4run.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4event.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4tracking.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4parmodels.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4processes.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4digits_hits.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4track.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4particles.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4geometry.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4materials.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4graphics_reps.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4Tree.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4FR.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4GMocren.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4visHepRep.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4RayTracer.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4VRML.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4ToolsSG.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4OpenGL.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4vis_management.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4modeling.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4interfaces.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4mctruth.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4geomtext.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4gdml.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4error_propagation.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4readout.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4physicslists.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4run.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4event.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4tracking.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4parmodels.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4processes.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4digits_hits.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4track.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4particles.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4geometry.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4materials.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4graphics_reps.so
 sim: /usr/lib/x86_64-linux-gnu/libGL.so
 sim: /usr/lib/x86_64-linux-gnu/libQt5OpenGL.so.5.15.3
 sim: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.3
 sim: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.3
 sim: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.3
 sim: /usr/lib/x86_64-linux-gnu/libxerces-c.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4analysis.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4analysis.so
 sim: /usr/lib/x86_64-linux-gnu/libexpat.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4zlib.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4intercoms.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4global.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4clhep.so
-sim: /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/lib/libG4ptl.so.2.3.3
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4zlib.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4intercoms.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4global.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4clhep.so
+sim: /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/lib/libG4ptl.so.2.3.3
 sim: CMakeFiles/sim.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable sim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable sim"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sim.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -242,6 +242,6 @@ CMakeFiles/sim.dir/clean:
 .PHONY : CMakeFiles/sim.dir/clean
 
 CMakeFiles/sim.dir/depend:
-	cd /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/build /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/build /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/build/CMakeFiles/sim.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/build /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/build /home/guy/software/geant4/geant4-v11.2.1-mt-gdml-install/projects/diamondDetector/build/CMakeFiles/sim.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/sim.dir/depend
 
