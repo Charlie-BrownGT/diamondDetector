@@ -1,35 +1,44 @@
 void generate_2D_histogram_from_branch() {
 
+	//setting up the file output names
 	char filename[] = "DD0cm_on_ID25cm_on_SD_on_beam-45cm_2deg";
-	
 	char rootFile[100];  // Adjust the size if needed
    	char pngFile[100];
-	
 	strcpy(rootFile, filename);
    	strcpy(pngFile, filename);
-   	
    	strcat(rootFile, ".root");
     	strcat(pngFile, ".png");
 	
 	// Open the ROOT file
 	TFile *file = TFile::Open(rootFile, "READ");
 
-	// Check if the file was successfully opened
+	// Checking file and tree contents
 	if (!file || file->IsZombie()) {
 	std::cerr << "Error opening file!" << std::endl;
 	return;
 	}
-
-	// Get the TTree from the file (replace "Position" with the name of your tree)
 	TTree *tree = (TTree*)file->Get("Position");
 	if (!tree) {
 	std::cerr << "TTree not found!" << std::endl;
 	file->Close();
 	return;
 	}
-
+	
+	//char detStat[100] = "Initialization";
+	
+	int zero = 0;
+	int SD = 1;
+	int ID = 1; 
+	int DD = 1;
+	
+	char detStat[100] = "SD on, ID on, DD on 2 Degree beam;Observations in X (mm);Observations in Y (mm)";
+	
+	//if (SD != zero){ char detStat[100] = "SD on, ID on, DD on "; }	
+	//char histInfo[] = "2 Degree beam;Observations in X (mm);Observations in Y (mm)";
+	//strcat("SD on, ID on, DD on ", "2 Degree beam;Observations in X (mm);Observations in Y (mm)");
+	
 	// Create a 2D histogram (300x300 bins, with ranges for both axes)
-	TH2F *hist2d = new TH2F("Legend", "2 Degree beam, SD on, ID on, DD on;Observations in X (mm);Observations in Y (mm)", 300, -50, 50, 300, -50, 50);
+	TH2F *hist2d = new TH2F("Legend", detStat, 300, -50, 50, 300, -50, 50);
 
 	// Set up variables to hold branch values
 	double branch1_value, branch2_value;
