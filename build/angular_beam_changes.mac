@@ -1,10 +1,10 @@
 /gps/ang/sigma_r 2. deg
-/run/beamOn 1000
+/run/beamOn 100000
 /gps/ang/sigma_r 2.5 deg
-/run/beamOn 1000
+/run/beamOn 100000
 /gps/ang/sigma_r 3. deg
-/run/beamOn 1000
+/run/beamOn 100000
 /gps/ang/sigma_r 3.5 deg
-/run/beamOn 1000
+/run/beamOn 100000
 /gps/ang/sigma_r 4. deg
-/run/beamOn 1000
+/run/beamOn 100000
