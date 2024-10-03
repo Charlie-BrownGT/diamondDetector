@@ -10,6 +10,9 @@
 #include "G4PVPlacement.hh"
 #include "G4NistManager.hh"
 
+#include <string>
+#include "globals.hh"
+
 #include "detector.hh"
 
 class MyDetectorConstruction : public G4VUserDetectorConstruction
@@ -17,6 +20,10 @@ class MyDetectorConstruction : public G4VUserDetectorConstruction
 public:
 	MyDetectorConstruction();
 	~MyDetectorConstruction();
+
+	G4String SDtxt;
+	G4String IDtxt;
+	G4String DDtxt;
 	
 	virtual G4VPhysicalVolume *Construct();
 	

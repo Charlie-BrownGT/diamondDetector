@@ -12,7 +12,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	
 	//detector sizes and positions defined here
 	G4double innerRadius = 0*cm, outerRadius = 15*cm, hz = 15*cm, startAngle = 0.*deg, spanningAngle = 360.*deg;
-	G4ThreeVector DDposition(0., 0., -30*cm);
+	G4ThreeVector DDposition(0., 0., 0.);
 	G4double diamondX = 4.5*mm, diamondY = 4.5*mm, diamondZ = 0.5*mm;
 	G4ThreeVector IDposition(0, 0, 0.25*m);
 	
@@ -59,21 +59,27 @@ void MyDetectorConstruction::ConstructSDandField()
 {
 	//varying detector usage here, detectors are turned on and off via the variable definitions SD, ID and DD	
 	
-	double SD, ID, DD;
-	SD = 1;
+	G4double SD, ID, DD;
+	SD = 0;
 	ID = 1;
 	DD = 1;
 	
 	if(SD == 1){
 		MySensitiveDetector *sensSD = new MySensitiveDetector("SD");
 		logicSD->SetSensitiveDetector(sensSD);
+		G4String SDtxt = "SD";
+		G4cout << "test string: " << SDtxt << G4endl;
 	}
 	if(ID == 1){
 		MySensitiveDetector *sensID = new MySensitiveDetector("ID");
 		logicID->SetSensitiveDetector(sensID);
+		IDtxt = "ID";
+		G4cout << "test string: " << IDtxt << G4endl;
 	}
 	if(DD == 1){
 		MySensitiveDetector *sensDD = new MySensitiveDetector("DD");
 		logicDD->SetSensitiveDetector(sensDD);
+		DDtxt = "DD";
+		G4cout << "test string: " << DDtxt << G4endl;
 	}
 }

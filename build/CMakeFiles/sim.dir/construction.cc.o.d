@@ -344,6 +344,7 @@ CMakeFiles/sim.dir/construction.cc.o: \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4NistMaterialBuilder.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4Pow.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4Exp.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/globals.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/detector.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VSensitiveDetector.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4CollectionNameVector.hh \

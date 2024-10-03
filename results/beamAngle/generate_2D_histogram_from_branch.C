@@ -1,0 +1,59 @@
+void generate_2D_histogram_from_branch() {
+
+	char filename[] = "DD0cm_on_ID25cm_on_SD_on_beam-45cm_2deg";
+	
+	char rootFile[100];  // Adjust the size if needed
+   	char pngFile[100];
+	
+	strcpy(rootFile, filename);
+   	strcpy(pngFile, filename);
+   	
+   	strcat(rootFile, ".root");
+    	strcat(pngFile, ".png");
+	
+	// Open the ROOT file
+	TFile *file = TFile::Open(rootFile, "READ");
+
+	// Check if the file was successfully opened
+	if (!file || file->IsZombie()) {
+	std::cerr << "Error opening file!" << std::endl;
+	return;
+	}
+
+	// Get the TTree from the file (replace "Position" with the name of your tree)
+	TTree *tree = (TTree*)file->Get("Position");
+	if (!tree) {
+	std::cerr << "TTree not found!" << std::endl;
+	file->Close();
+	return;
+	}
+
+	// Create a 2D histogram (300x300 bins, with ranges for both axes)
+	TH2F *hist2d = new TH2F("Legend", "2 Degree beam, SD on, ID on, DD on;Observations in X (mm);Observations in Y (mm)", 300, -50, 50, 300, -50, 50);
+
+	// Set up variables to hold branch values
+	double branch1_value, branch2_value;
+
+	// Set branch addresses
+	tree->SetBranchAddress("X", &branch1_value);  // Replace with branch name
+	tree->SetBranchAddress("Y", &branch2_value);  // Replace with branch name
+
+	// Loop over the entries in the tree and fill the histogram
+	double nentries = tree->GetEntries();
+
+	for (double i = 0; i < nentries; i++) {
+		tree->GetEntry(i);
+		hist2d->Fill(branch1_value, branch2_value);  // Fill the 2D histogram with the branch values
+	}
+
+	// Create a canvas
+	TCanvas *canvas = new TCanvas("canvas", "21Na Observations over X and Y", 800, 600);
+
+	// Draw the 2D histogram
+	hist2d->Draw("COLZ");  // "COLZ" adds color to represent bin content
+
+	canvas->SaveAs(pngFile);
+
+	file->Close();
+}
+

@@ -513,7 +513,8 @@ CMakeFiles/sim.dir/action.cc.o: ../action.cc \
   /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4GenericAnalysisManager.icc \
   /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4GenericFileManager.hh \
   /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4GenericFileManager.icc \
-  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4Run.hh
+  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4Run.hh \
+  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/globals.hh
 
 CMakeFiles/sim.dir/construction.cc.o: ../construction.cc \
   /usr/include/stdc-predef.h \
@@ -914,6 +915,7 @@ CMakeFiles/sim.dir/construction.cc.o: ../construction.cc \
   /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4NistMaterialBuilder.hh \
   /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4Pow.hh \
   /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4Exp.hh \
+  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/globals.hh \
   ../detector.hh \
   /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VSensitiveDetector.hh \
   /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4CollectionNameVector.hh \
@@ -3316,7 +3318,8 @@ CMakeFiles/sim.dir/run.cc.o: ../run.cc \
   /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/PTL/Globals.hh \
   /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/PTL/Types.hh \
   /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/PTL/Utility.hh \
-  /usr/include/c++/11/cstddef
+  /usr/include/c++/11/cstddef \
+  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/globals.hh
 
 CMakeFiles/sim.dir/sim.cc.o: ../sim.cc \
   /usr/include/stdc-predef.h \
@@ -4015,6 +4018,7 @@ CMakeFiles/sim.dir/sim.cc.o: ../sim.cc \
   /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4UIsession.hh \
   /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4coutDestination.hh \
   /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4UIbatch.hh \
+  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/globals.hh \
   ../construction.hh \
   /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4SystemOfUnits.hh \
   /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VUserDetectorConstruction.hh \

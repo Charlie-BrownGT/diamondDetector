@@ -6,6 +6,8 @@
 #include "G4VisManager.hh"
 #include "G4VisExecutive.hh"
 
+#include "globals.hh"
+
 #include "construction.hh"
 #include "physics.hh"
 #include "action.hh"
