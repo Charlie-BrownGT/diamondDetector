@@ -15,21 +15,19 @@ MyRunAction::MyRunAction()
 MyRunAction::~MyRunAction()
 {}
 
-void MyRunAction::BeginOfRunAction(const G4Run*)
+void MyRunAction::BeginOfRunAction(const G4Run* run)
 {
 	G4AnalysisManager *man = G4AnalysisManager::Instance();
 	
-	G4double SD, ID, DD;
-	SD = 1;
-	ID = 1;
-	DD = 1;
-	
 	//changing the file name of the root output here
-	man->OpenFile("DD0cm_on_ID25cm_on_SD_off_beam-45cm_2deg.root");
+	//man->OpenFile("DD0cm_on_ID25cm_on_SD_off_beam-45cm_2deg.root");
 	
-	//if(SD == 1 && ID == 1 && DD == 1){
-	//	man->OpenFile("SDon_IDon_DDon"+"45cmBeam.root");
-	//}
+	G4int runID = run->GetRunID();
+	
+	std::stringstream strRunID;
+	strRunID << runID;
+	
+	man->OpenFile("output"+strRunID.str()+".root");
 }
 
 void MyRunAction::EndOfRunAction(const G4Run*)

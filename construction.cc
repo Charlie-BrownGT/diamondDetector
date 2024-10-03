@@ -60,14 +60,14 @@ void MyDetectorConstruction::ConstructSDandField()
 	//varying detector usage here, detectors are turned on and off via the variable definitions SD, ID and DD	
 	
 	G4double SD, ID, DD;
-	SD = 0;
+	SD = 1;
 	ID = 1;
 	DD = 1;
 	
 	if(SD == 1){
 		MySensitiveDetector *sensSD = new MySensitiveDetector("SD");
 		logicSD->SetSensitiveDetector(sensSD);
-		G4String SDtxt = "SD";
+		SDtxt = "SD";
 		G4cout << "test string: " << SDtxt << G4endl;
 	}
 	if(ID == 1){
