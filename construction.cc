@@ -58,12 +58,21 @@ void MyDetectorConstruction::ConstructSDandField()
 {
 	//varying detector usage here, then changing the root output file name in run.cc	
 	
-	//MySensitiveDetector *sensSD = new MySensitiveDetector("SiliconDetector");
-	//logicSD->SetSensitiveDetector(sensSD);
+	double SD, ID, DD;
+	SD = 1;
+	ID = 1;
+	DD = 1;
 	
-	//MySensitiveDetector *sensID = new MySensitiveDetector("ICDetector");
-	//logicID->SetSensitiveDetector(sensID);
-	
-	MySensitiveDetector *sensDD = new MySensitiveDetector("DiamondDetector");
-	logicDD->SetSensitiveDetector(sensDD);
+	if(SD == 1){
+		MySensitiveDetector *sensSD = new MySensitiveDetector("SiliconDetector");
+		logicSD->SetSensitiveDetector(sensSD);
+	}
+	if(ID == 1){
+		MySensitiveDetector *sensID = new MySensitiveDetector("ICDetector");
+		logicID->SetSensitiveDetector(sensID);
+	}
+	if(DD == 1){
+		MySensitiveDetector *sensDD = new MySensitiveDetector("DiamondDetector");
+		logicDD->SetSensitiveDetector(sensDD);
+	}
 }
