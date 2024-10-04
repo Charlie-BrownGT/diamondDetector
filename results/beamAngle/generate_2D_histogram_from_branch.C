@@ -1,5 +1,5 @@
 void generate_2D_histogram_from_branch(const char *dirname="/home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/results/beamAngle/", const char *ext=".root") {
-
+	
 	//setting up the file output names  
    	char pngFile[256]; // Adjust the size if needed
 	
@@ -24,7 +24,8 @@ void generate_2D_histogram_from_branch(const char *dirname="/home/guy/software/g
 		}
 	}
 	
-	// Open the ROOT file
+	int strLength;
+	char detStat[256];
 	
 	for(int i = 0; i < file_count; i++){
 	
@@ -42,10 +43,12 @@ void generate_2D_histogram_from_branch(const char *dirname="/home/guy/software/g
 			return;
 		}
 		
-		char detStat[256];
+		//remove the .root suffix in the file name
 		strcpy(detStat, filenames[i]->Data());
 		std::cout << detStat << std::endl;
-		
+		strLength = strlen(detStat);
+		strLength = strLength - 5;
+		detStat[strLength] = '\0';
 		strcpy(pngFile, detStat);
 		
 		// Create a 2D histogram (1000x1000 bins, with ranges for both axes)
@@ -69,17 +72,15 @@ void generate_2D_histogram_from_branch(const char *dirname="/home/guy/software/g
 		// Create a canvas and draw histogram
 		TCanvas *canvas = new TCanvas("canvas", "21Na Observations over X and Y", 800, 600);
 		hist2d->Draw("COLZ");
-		
 		strcat(pngFile, ".png");
-		
 		canvas->SaveAs(pngFile);
+		delete canvas;
 		file->Close();
 	}
 	
 	// Print the filenames stored in the array and free memory used
 	std::cout << "Stored Filenames:" << std::endl;
 	for (int i = 0; i < file_count; i++) {
-		//std::cout << filenames[i]->Data() << std::endl;
 		delete filenames[i];
 	}
 }
