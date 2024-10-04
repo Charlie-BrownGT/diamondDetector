@@ -8,11 +8,10 @@ MyDetectorConstruction::~MyDetectorConstruction()
 
 G4VPhysicalVolume *MyDetectorConstruction::Construct()
 {
-	G4double boxSize = 0.5*m; 
-	
 	//detector sizes and positions defined here
+	G4double boxSize = 0.5*m; 
 	G4double innerRadius = 0*cm, outerRadius = 15*cm, hz = 15*cm, startAngle = 0.*deg, spanningAngle = 360.*deg;
-	G4ThreeVector DDposition(0., 0., 0.);
+	G4ThreeVector DDposition(0., 0., -30.*cm);
 	G4double diamondX = 4.5*mm, diamondY = 4.5*mm, diamondZ = 0.5*mm;
 	G4ThreeVector IDposition(0, 0, 0.25*m);
 	

@@ -27,7 +27,7 @@ void MyRunAction::BeginOfRunAction(const G4Run* run)
 	std::stringstream strRunID;
 	strRunID << runID;
 	
-	man->OpenFile("ID_DD_detector_on_2-4ang_dist_0.5_intervals"+strRunID.str()+".root");
+	man->OpenFile("ID_DD_detector_on_DD_-30cm"+strRunID.str()+".root");
 }
 
 void MyRunAction::EndOfRunAction(const G4Run*)

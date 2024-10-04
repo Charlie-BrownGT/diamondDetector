@@ -1,4 +1,4 @@
-void generate_2D_histogram_from_branch(const char *dirname="/home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/results/DDPosition/", const char *ext=".root") {
+void generate_2D_histogram_from_branch(const char *dirname="/home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/results/DDPosition2DegBeam/", const char *ext=".root") {
 	
 	//setting up the file output names  
    	char pngFile[256]; // Adjust the size if needed
