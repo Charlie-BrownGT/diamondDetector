@@ -40,6 +40,7 @@ int main(int argc, char** argv)
 		ui->SessionStart();
 	}
 	else{
+        	UImanager->ApplyCommand("/control/execute beam.mac");
         	G4String command = "/control/execute ";
         	G4String fileName = argv[1];
         	UImanager->ApplyCommand(command+fileName);
