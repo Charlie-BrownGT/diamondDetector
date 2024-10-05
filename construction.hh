@@ -13,6 +13,9 @@
 #include <string>
 #include "globals.hh"
 
+#include "G4VisAttributes.hh"
+#include "G4Colour.hh"
+
 #include "detector.hh"
 
 class MyDetectorConstruction : public G4VUserDetectorConstruction
