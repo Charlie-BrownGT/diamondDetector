@@ -43,7 +43,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	G4double zWorld = 0.5*m;
 	
 	G4double innerRadius = 0*cm, outerRadius = 15*cm, hz = 15*cm, startAngle = 0.*deg, spanningAngle = 360.*deg;
-	G4ThreeVector DDposition(0., 0., -30.*cm);
+	G4ThreeVector DDposition(0., 0., 9.*cm);
 	G4double diamondX = 4.5*mm, diamondY = 4.5*mm, diamondZ = 0.5*mm;
 	G4ThreeVector IDposition(0, 0, 0.25*m);
 	
@@ -62,7 +62,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	
 	solidID = new G4Tubs("solidID", innerRadius, outerRadius, hz, startAngle, spanningAngle);      
 	logicID = new G4LogicalVolume(solidID, CF4, "logicID");
-	G4VisAttributes* visAttributesID = new G4VisAttributes(G4Colour(1.0, 0.0, 0.0)); // Green color
+	G4VisAttributes* visAttributesID = new G4VisAttributes(G4Colour(1.0, 0.0, 0.0)); // Red color
 	visAttributesID->SetVisibility(true);
 	visAttributesID->SetForceSolid(true);
 	logicID->SetVisAttributes(visAttributesID);
@@ -70,10 +70,10 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	
 	solidSD = new G4Box("solidSD", xWorld/nRows, yWorld/nCols, 0.01*m);
 	logicSD = new G4LogicalVolume(solidSD, vacuum, "logicSD");
-	G4VisAttributes* visAttributesSD = new G4VisAttributes(G4Colour(0.0, 0.0, 1.0)); // Green color
+	G4VisAttributes* visAttributesSD = new G4VisAttributes(G4Colour(0.0, 0.0, 1.0)); // Blue color
 	visAttributesSD->SetVisibility(true);
 	visAttributesSD->SetForceSolid(true);
-	//logicSD->SetVisAttributes(visAttributesSD);
+	logicSD->SetVisAttributes(visAttributesSD);
 	for(G4int i = 0; i < nRows; i++) {
 		for(G4int j = 0; j < nCols; j++) {
 			physSD = new G4PVPlacement(0, G4ThreeVector(-0.5*m+(i+0.5)*m/nRows, -0.5*m+(j+0.5)*m/nCols, 0.49*m), logicSD, "physSD", logicWorld, false, j+i*nCols, false);
