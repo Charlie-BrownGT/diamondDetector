@@ -43,6 +43,7 @@ void generate_2D_histogram_from_branch(const char *dirname="/home/guy/software/g
 			return;
 		}
 		
+		//finding and printing the total number of entries per tree here
 		Long64_t nEntries = tree->GetEntries();
 		std::cout << "Entry Number: " << nEntries << std::endl;
 		
