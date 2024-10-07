@@ -3,10 +3,8 @@
 MyDetectorConstruction::MyDetectorConstruction()
 {
 	fMessenger = new G4GenericMessenger(this, "/Sdetector/", "SDetector Construction");
-	
 	fMessenger->DeclareProperty("nCols", nCols, "Number of columns in SD");
 	fMessenger->DeclareProperty("nRows", nRows, "Number of rows in SD");
-	
 	nCols = 10; 
 	nRows = 10; 
 	
@@ -37,11 +35,11 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 {
 	//detector sizes and positions defined here
 	G4double xWorld = 0.5*m, yWorld = 0.5*m, zWorld = 1.*m;
-	G4double innerRadius = 0*cm, outerRadius = 15*cm, hz = 20*cm, startAngle = 0.*deg, spanningAngle = 360.*deg;
+	G4double innerRadius = 0*cm, outerRadius = 40*cm, hz = 20*cm, startAngle = 0.*deg, spanningAngle = 360.*deg;
 	G4double diamondX = 4.5*mm, diamondY = 4.5*mm, diamondZ = 0.5*mm;
 	
 	G4ThreeVector DDposition(0., 0., 40.*cm);
-	G4ThreeVector IDposition(0., 0., 75.*cm);
+	G4ThreeVector IDposition(0., 0., 70.*cm);
 	G4double physSDz = 0.99*m;
 	
 	//volumes defined here

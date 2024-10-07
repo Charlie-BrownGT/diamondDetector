@@ -19,15 +19,17 @@ void MyRunAction::BeginOfRunAction(const G4Run* run)
 {
 	G4AnalysisManager *man = G4AnalysisManager::Instance();
 	
-	//changing the file name of the root output here
-	//man->OpenFile("DD0cm_on_ID25cm_on_SD_off_beam-45cm_2deg.root");
-	
 	G4int runID = run->GetRunID();
 	
 	std::stringstream strRunID;
 	strRunID << runID;
 	
-	man->OpenFile("ID_DD_detector_on_DD_-30cm"+strRunID.str()+".root");
+	G4double runID2 = run->GetRunID();
+	runID2 = runID2 / 2.;
+	std::stringstream strRunID2;
+	strRunID2 << runID2;
+	
+	man->OpenFile("50cmID_40cmDD4.5mm_detector_on"+strRunID2.str()+".root");
 }
 
 void MyRunAction::EndOfRunAction(const G4Run*)

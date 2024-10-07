@@ -24,29 +24,25 @@ class MyDetectorConstruction : public G4VUserDetectorConstruction
 public:
 	MyDetectorConstruction();
 	~MyDetectorConstruction();
-
-	G4String SDtxt;
-	G4String IDtxt;
-	G4String DDtxt;
 	
 	virtual G4VPhysicalVolume *Construct();
 	
 private:
-	G4LogicalVolume *logicSD;
-	G4LogicalVolume *logicID;
-	G4LogicalVolume *logicDD;
 	virtual void ConstructSDandField();
 	
 	//defining the stuff for the user defined message
-	G4int nCols, nRows;
+	G4LogicalVolume *logicSD, *logicID, *logicDD;
 	G4Box *solidWorld, *solidDD, *solidSD;
 	G4Tubs *solidID;
 	G4LogicalVolume *logicWorld;
 	G4VPhysicalVolume *physWorld, *physDD, *physSD, *physID;
-	G4GenericMessenger *fMessenger;
-	
 	G4Material *vacuum, *diamond, *CF4;
 	G4Element *C, *F;
+	
+	G4int nCols, nRows;
+	G4GenericMessenger *fMessenger;
+	
+	//G4GenericMessenger *gMessenger;
 	
 	void DefineMaterials();
 };

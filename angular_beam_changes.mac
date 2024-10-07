@@ -1,3 +1,11 @@
+/gps/ang/sigma_r 0. deg
+/run/beamOn 100000
+/gps/ang/sigma_r 0.5 deg
+/run/beamOn 100000
+/gps/ang/sigma_r 1.0 deg
+/run/beamOn 100000
+/gps/ang/sigma_r 1.5 deg
+/run/beamOn 100000
 /gps/ang/sigma_r 2. deg
 /run/beamOn 100000
 /gps/ang/sigma_r 2.5 deg
@@ -7,4 +15,22 @@
 /gps/ang/sigma_r 3.5 deg
 /run/beamOn 100000
 /gps/ang/sigma_r 4. deg
+/run/beamOn 100000
+/gps/ang/sigma_r 4.5 deg
+/run/beamOn 100000
+/gps/ang/sigma_r 5. deg
+/run/beamOn 100000
+/gps/ang/sigma_r 5.5 deg
+/run/beamOn 100000
+/gps/ang/sigma_r 6. deg
+/run/beamOn 100000
+/gps/ang/sigma_r 6.5 deg
+/run/beamOn 100000
+/gps/ang/sigma_r 7. deg
+/run/beamOn 100000
+/gps/ang/sigma_r 7.5 deg
+/run/beamOn 100000
+/gps/ang/sigma_r 8. deg
+/run/beamOn 100000
+/gps/ang/sigma_r 8.5 deg
 /run/beamOn 100000
