@@ -36,21 +36,18 @@ void MyDetectorConstruction::DefineMaterials()
 G4VPhysicalVolume *MyDetectorConstruction::Construct()
 {
 	//detector sizes and positions defined here
-	G4double boxSize = 0.5*m; 
-	
-	G4double xWorld = 0.5*m;
-	G4double yWorld = 0.5*m;
-	G4double zWorld = 0.5*m;
-	
-	G4double innerRadius = 0*cm, outerRadius = 15*cm, hz = 15*cm, startAngle = 0.*deg, spanningAngle = 360.*deg;
-	G4ThreeVector DDposition(0., 0., 9.*cm);
+	G4double xWorld = 0.5*m, yWorld = 0.5*m, zWorld = 1.*m;
+	G4double innerRadius = 0*cm, outerRadius = 15*cm, hz = 20*cm, startAngle = 0.*deg, spanningAngle = 360.*deg;
 	G4double diamondX = 4.5*mm, diamondY = 4.5*mm, diamondZ = 0.5*mm;
-	G4ThreeVector IDposition(0, 0, 0.25*m);
+	
+	G4ThreeVector DDposition(0., 0., 40.*cm);
+	G4ThreeVector IDposition(0., 0., 75.*cm);
+	G4double physSDz = 0.99*m;
 	
 	//volumes defined here
 	solidWorld = new G4Box("solidWorld", xWorld, yWorld, zWorld);
 	logicWorld = new G4LogicalVolume(solidWorld, vacuum, "logicWorld");
-	physWorld = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicWorld, "physWorld", 0, false, 0, true);
+	physWorld = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.*cm), logicWorld, "physWorld", 0, false, 0, true);
 	
 	solidDD = new G4Box("solidDD", diamondX, diamondY, diamondZ);
 	logicDD = new G4LogicalVolume(solidDD, diamond, "logicDD");
@@ -76,7 +73,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	logicSD->SetVisAttributes(visAttributesSD);
 	for(G4int i = 0; i < nRows; i++) {
 		for(G4int j = 0; j < nCols; j++) {
-			physSD = new G4PVPlacement(0, G4ThreeVector(-0.5*m+(i+0.5)*m/nRows, -0.5*m+(j+0.5)*m/nCols, 0.49*m), logicSD, "physSD", logicWorld, false, j+i*nCols, false);
+			physSD = new G4PVPlacement(0, G4ThreeVector(-0.5*m+(i+0.5)*m/nRows, -0.5*m+(j+0.5)*m/nCols, physSDz), logicSD, "physSD", logicWorld, false, j+i*nCols, false);
 		}
 	}
 		
