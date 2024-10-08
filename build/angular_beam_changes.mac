@@ -34,3 +34,9 @@
 /run/beamOn 100000
 /gps/ang/sigma_r 8.5 deg
 /run/beamOn 100000
+/gps/ang/sigma_r 9. deg
+/run/beamOn 100000
+/gps/ang/sigma_r 9.5 deg
+/run/beamOn 100000
+/gps/ang/sigma_r 10. deg
+/run/beamOn 100000

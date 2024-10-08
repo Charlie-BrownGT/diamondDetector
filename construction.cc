@@ -8,6 +8,16 @@ MyDetectorConstruction::MyDetectorConstruction()
 	nCols = 10; 
 	nRows = 10; 
 	
+	
+	//gMessenger = new G4GenericMessenger(this, "/DDposition/", "DD position in z (cm)");
+	gMessenger = new G4GenericMessenger(this, "/", "DD position in z (cm)");
+	gMessenger->DeclareProperty("DDPosition", DDPosition, "Position of DD in z (cm)");
+	DDPosition = 40.;
+	
+	hMessenger = new G4GenericMessenger(this, "/DDsize/", "DD size in x and y(mm)");
+	hMessenger->DeclareProperty("DDSize", DDSize, "Size of DD in x and y(mm)");
+	DDSize = 2.25;
+
 	DefineMaterials();
 }
 
@@ -33,13 +43,19 @@ void MyDetectorConstruction::DefineMaterials()
 
 G4VPhysicalVolume *MyDetectorConstruction::Construct()
 {
-	//detector sizes and positions defined here
+	//detector sizes and positions defined here, note, G4 draws a 0.5m box as 1m3
 	G4double xWorld = 0.5*m, yWorld = 0.5*m, zWorld = 1.*m;
-	G4double innerRadius = 0*cm, outerRadius = 40*cm, hz = 20*cm, startAngle = 0.*deg, spanningAngle = 360.*deg;
-	G4double diamondX = 4.5*mm, diamondY = 4.5*mm, diamondZ = 0.5*mm;
+	G4double innerRadius = 0*cm, outerRadius = 40*cm, hz = 10*cm, startAngle = 0.*deg, spanningAngle = 360.*deg;
 	
-	G4ThreeVector DDposition(0., 0., 40.*cm);
-	G4ThreeVector IDposition(0., 0., 70.*cm);
+	DDPositionz = DDPosition*cm;
+	
+	DDSizexy = DDSize*mm;
+	//G4double diamondSize = 10.0*mm;
+	
+	
+	G4double diamondZ = 0.25*mm;
+	G4ThreeVector DDposition(0., 0., DDPositionz);
+	G4ThreeVector IDposition(0., 0., 85.*cm); //ID hz = 10cm
 	G4double physSDz = 0.99*m;
 	
 	//volumes defined here
@@ -47,7 +63,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	logicWorld = new G4LogicalVolume(solidWorld, vacuum, "logicWorld");
 	physWorld = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.*cm), logicWorld, "physWorld", 0, false, 0, true);
 	
-	solidDD = new G4Box("solidDD", diamondX, diamondY, diamondZ);
+	solidDD = new G4Box("solidDD", DDSizexy, DDSizexy, diamondZ);
 	logicDD = new G4LogicalVolume(solidDD, diamond, "logicDD");
 	G4VisAttributes* visAttributesDD = new G4VisAttributes(G4Colour(0.0, 1.0, 0.0)); // Green color
 	visAttributesDD->SetVisibility(true);
@@ -82,10 +98,10 @@ void MyDetectorConstruction::ConstructSDandField()
 {
 	//varying detector usage here, detectors are turned on and off via the variable definitions SD, ID and DD	
 	
-	G4double SD, ID, DD;
-	SD = 0;
-	ID = 1;
-	DD = 1;
+	G4double SD = 0;
+	G4double ID = 0;
+	G4double DD = 0;
+	G4cout << SD << G4endl;
 	
 	if(SD == 1){
 		MySensitiveDetector *sensSD = new MySensitiveDetector("SD");

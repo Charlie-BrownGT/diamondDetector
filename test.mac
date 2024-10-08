@@ -1,0 +1,4 @@
+/DDPosition 70.
+/run/reinitializeGeometry
+/run/beamOn 1 
+/control/execute vis.mac

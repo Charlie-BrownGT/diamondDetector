@@ -16,7 +16,6 @@
 #include "G4GenericMessenger.hh"
 
 #include "globals.hh"
-
 #include "detector.hh"
 
 class MyDetectorConstruction : public G4VUserDetectorConstruction
@@ -26,9 +25,10 @@ public:
 	~MyDetectorConstruction();
 	
 	virtual G4VPhysicalVolume *Construct();
+	virtual void ConstructSDandField();
 	
 private:
-	virtual void ConstructSDandField();
+	//virtual void ConstructSDandField();
 	
 	//defining the stuff for the user defined message
 	G4LogicalVolume *logicSD, *logicID, *logicDD;
@@ -39,10 +39,15 @@ private:
 	G4Material *vacuum, *diamond, *CF4;
 	G4Element *C, *F;
 	
+	//defining user message on SD
 	G4int nCols, nRows;
 	G4GenericMessenger *fMessenger;
 	
-	//G4GenericMessenger *gMessenger;
+	G4double DDPositionz, DDPosition;
+	G4GenericMessenger *gMessenger;
+	
+	G4double DDSize, DDSizexy;
+	G4GenericMessenger *hMessenger;
 	
 	void DefineMaterials();
 };

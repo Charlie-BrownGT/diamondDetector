@@ -1,4 +1,5 @@
 #include "run.hh"
+#include "construction.hh"
 
 MyRunAction::MyRunAction()
 {
@@ -29,7 +30,7 @@ void MyRunAction::BeginOfRunAction(const G4Run* run)
 	std::stringstream strRunID2;
 	strRunID2 << runID2;
 	
-	man->OpenFile("50cmID_40cmDD4.5mm_detector_on"+strRunID2.str()+".root");
+	man->OpenFile("75cmIDOff_70cmDD_20mmOn"+strRunID2.str()+".root");
 }
 
 void MyRunAction::EndOfRunAction(const G4Run*)
