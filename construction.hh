@@ -49,6 +49,9 @@ private:
 	G4double DDSize, DDSizexy;
 	G4GenericMessenger *hMessenger;
 	
+	G4int SD, ID, DD;
+	G4GenericMessenger *iMessenger;
+	
 	void DefineMaterials();
 };
 #endif

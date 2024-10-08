@@ -17,6 +17,14 @@ public:
 	virtual void BeginOfRunAction(const G4Run*);
 	virtual void EndOfRunAction(const G4Run*);
 	
-	G4GenericMessenger *hMessenger;
+private:
+	G4double DDPositionz, DDPosition;
+	G4GenericMessenger *gMessenger2;
+	
+	G4double DDSize, DDSizexy, DDSizePH;
+	G4GenericMessenger *hMessenger2;
+	
+	G4int SD, ID, DD;
+	G4GenericMessenger *iMessenger2;
 };
 #endif

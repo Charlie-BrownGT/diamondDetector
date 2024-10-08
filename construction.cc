@@ -8,16 +8,21 @@ MyDetectorConstruction::MyDetectorConstruction()
 	nCols = 10; 
 	nRows = 10; 
 	
-	
-	//gMessenger = new G4GenericMessenger(this, "/DDposition/", "DD position in z (cm)");
-	gMessenger = new G4GenericMessenger(this, "/", "DD position in z (cm)");
-	gMessenger->DeclareProperty("DDPosition", DDPosition, "Position of DD in z (cm)");
 	DDPosition = 40.;
+	gMessenger = new G4GenericMessenger(this, "/DDPos/", "DD position in z (cm)");
+	gMessenger->DeclareProperty("DDPosition", DDPosition, "Position of DD in z (cm)");
 	
-	hMessenger = new G4GenericMessenger(this, "/DDsize/", "DD size in x and y(mm)");
-	hMessenger->DeclareProperty("DDSize", DDSize, "Size of DD in x and y(mm)");
 	DDSize = 2.25;
-
+	hMessenger = new G4GenericMessenger(this, "/DDSize/", "DD size in x and y(mm)");
+	hMessenger->DeclareProperty("DDSize", DDSize, "Size of DD in x and y(mm)");
+	
+	SD = 1, ID = 1, DD = 1;
+	iMessenger = new G4GenericMessenger(this, "/DetectorsOnOrOff/", "Detector status");
+	iMessenger->DeclareProperty("SD", SD, "SD on = 1, off = 0"); 
+	iMessenger->DeclareProperty("ID", ID, "ID on = 1, off = 0"); 
+	iMessenger->DeclareProperty("DD", DD, "DD on = 1, off = 0"); 
+	
+	
 	DefineMaterials();
 }
 
@@ -98,10 +103,9 @@ void MyDetectorConstruction::ConstructSDandField()
 {
 	//varying detector usage here, detectors are turned on and off via the variable definitions SD, ID and DD	
 	
-	G4double SD = 0;
-	G4double ID = 0;
-	G4double DD = 0;
 	G4cout << SD << G4endl;
+	G4cout << ID << G4endl;
+	G4cout << DD << G4endl;
 	
 	if(SD == 1){
 		MySensitiveDetector *sensSD = new MySensitiveDetector("SD");
