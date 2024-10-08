@@ -1,0 +1,3 @@
+/gps/ang/sigma_r {sigmaR} deg
+/run/reinitializeGeometry 
+/run/beamOn 100

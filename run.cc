@@ -34,10 +34,6 @@ void MyRunAction::BeginOfRunAction(const G4Run* run)
 {
 	G4AnalysisManager *man = G4AnalysisManager::Instance();
 	
-	//G4cout << SD << G4endl;
-	//G4cout << ID << G4endl;
-	//G4cout << DD << G4endl;
-	
 	//DD position string
 	std::stringstream DDPosStr;
 	DDPosStr << DDPosition;
@@ -47,9 +43,9 @@ void MyRunAction::BeginOfRunAction(const G4Run* run)
 	std::stringstream DDSizeStr;
 	DDSizeStr << DDSizePH;
 	
-	//angular componenet to file name
+	//angular component to file name
 	G4double runID = run->GetRunID();
-	runID = runID / 2.;
+	runID = runID / 10.;
 	std::stringstream strRunID;
 	strRunID << runID;
 	
@@ -61,9 +57,11 @@ void MyRunAction::BeginOfRunAction(const G4Run* run)
 	if (DD == 1){DDStr = "On";}
 	if (DD == 0){DDStr = "Off";}
 	
+	//.root file varing angular distribution
+	man->OpenFile("75cmIDpos"+DDPosStr.str()+"cmDDpos_"+DDSizeStr.str()+"mmDD_ID"+IDStr+"DD"+DDStr+strRunID.str()+"deg.root");
 	
-	//man->OpenFile("75cmIDpos"+DDPosStr.str()+"cmDDpos_"+DDSizeStr.str()+"mmDD_ID"+IDStr+"DD"+DDStr+"_ang"+strRunID.str()+".root");
-	man->OpenFile("75cmIDpos"+DDPosStr.str()+"cmDDpos_"+DDSizeStr.str()+"mmDD_ID"+IDStr+"DD"+DDStr+"4deg.root");
+	//.root file name for position, size and detectors
+	//man->OpenFile("75cmIDpos"+DDPosStr.str()+"cmDDpos_"+DDSizeStr.str()+"mmDD_ID"+IDStr+"DD"+DDStr+"4deg.root");
 }
 
 void MyRunAction::EndOfRunAction(const G4Run*)
