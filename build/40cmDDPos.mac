@@ -1,6 +1,8 @@
 #40cm position, 2 degree beam, varying detector size and detector
 
 #4.5mm detector, all dets on
+/DDPos/DDPosition 40
+/DDPos2/DDPosition 40
 /DetectorsOnOrOff/ID 1
 /DetectorsOnOrOff2/ID 1
 /DetectorsOnOrOff/DD 1
@@ -10,6 +12,8 @@
 /control/execute vis.mac
 
 #4.5mm detector, ID dets on
+/DDPos/DDPosition 40
+/DDPos2/DDPosition 40
 /DetectorsOnOrOff/ID 1
 /DetectorsOnOrOff2/ID 1
 /DetectorsOnOrOff/DD 0
@@ -19,15 +23,19 @@
 /control/execute vis.mac
 
 #4.5mm detector, DD dets on
+/DDPos/DDPosition 40
+/DDPos2/DDPosition 40
 /DetectorsOnOrOff/ID 0
 /DetectorsOnOrOff2/ID 0
 /DetectorsOnOrOff/DD 1
 /DetectorsOnOrOff2/DD 1
 /run/reinitializeGeometry
-/run/beamOn 100000
+/run/beamOn 100000 
 /control/execute vis.mac
 
 #9mm detector, all dets on
+/DDPos/DDPosition 40
+/DDPos2/DDPosition 40
 /DDSize/DDSize 4.75
 /DDSize2/DDSize 4.75
 /DetectorsOnOrOff/ID 1
@@ -39,6 +47,8 @@
 /control/execute vis.mac
 
 #9mm detector, ID dets on
+/DDPos/DDPosition 40
+/DDPos2/DDPosition 40
 /DDSize/DDSize 4.75
 /DDSize2/DDSize 4.75
 /DetectorsOnOrOff/ID 1
@@ -50,6 +60,8 @@
 /control/execute vis.mac
 
 #9mm detector, DD dets on
+/DDPos/DDPosition 40
+/DDPos2/DDPosition 40
 /DDSize/DDSize 4.75
 /DDSize2/DDSize 4.75
 /DetectorsOnOrOff/ID 0
@@ -61,6 +73,8 @@
 /control/execute vis.mac
 
 #20mm detector, all dets on
+/DDPos/DDPosition 40
+/DDPos2/DDPosition 40
 /DDSize/DDSize 10.0
 /DDSize2/DDSize 10.0
 /DetectorsOnOrOff/ID 1
@@ -72,6 +86,8 @@
 /control/execute vis.mac
 
 #20mm detector, all dets on
+/DDPos/DDPosition 40
+/DDPos2/DDPosition 40
 /DDSize/DDSize 10.0
 /DDSize2/DDSize 10.0
 /DetectorsOnOrOff/ID 1
@@ -83,6 +99,8 @@
 /control/execute vis.mac
 
 #20mm detector, all dets on
+/DDPos/DDPosition 40
+/DDPos2/DDPosition 40
 /DDSize/DDSize 10.0
 /DDSize2/DDSize 10.0
 /DetectorsOnOrOff/ID 0

@@ -16,7 +16,7 @@ MyDetectorConstruction::MyDetectorConstruction()
 	hMessenger = new G4GenericMessenger(this, "/DDSize/", "DD size in x and y(mm)");
 	hMessenger->DeclareProperty("DDSize", DDSize, "Size of DD in x and y(mm)");
 	
-	SD = 1, ID = 1, DD = 1;
+	SD = 0, ID = 1, DD = 1;
 	iMessenger = new G4GenericMessenger(this, "/DetectorsOnOrOff/", "Detector status");
 	iMessenger->DeclareProperty("SD", SD, "SD on = 1, off = 0"); 
 	iMessenger->DeclareProperty("ID", ID, "ID on = 1, off = 0"); 
@@ -102,10 +102,9 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 void MyDetectorConstruction::ConstructSDandField()
 {
 	//varying detector usage here, detectors are turned on and off via the variable definitions SD, ID and DD	
-	
-	G4cout << SD << G4endl;
-	G4cout << ID << G4endl;
-	G4cout << DD << G4endl;
+	//G4cout << SD << G4endl;
+	//G4cout << ID << G4endl;
+	//G4cout << DD << G4endl;
 	
 	if(SD == 1){
 		MySensitiveDetector *sensSD = new MySensitiveDetector("SD");
