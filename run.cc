@@ -45,6 +45,9 @@ void MyRunAction::BeginOfRunAction(const G4Run* run)
 	
 	//angular component to file name
 	G4double runID = run->GetRunID();
+	
+	G4cout << runID << G4endl;
+	
 	runID = runID / 10.;
 	std::stringstream strRunID;
 	strRunID << runID;
@@ -58,10 +61,20 @@ void MyRunAction::BeginOfRunAction(const G4Run* run)
 	if (DD == 0){DDStr = "Off";}
 	
 	//.root file varing angular distribution
-	man->OpenFile("75cmIDpos"+DDPosStr.str()+"cmDDpos_"+DDSizeStr.str()+"mmDD_ID"+IDStr+"DD"+DDStr+strRunID.str()+"deg.root");
+	//man->OpenFile("75cmIDpos"+DDPosStr.str()+"cmDDpos_"+DDSizeStr.str()+"mmDD_ID"+IDStr+"DD"+DDStr+strRunID.str()+"deg.root");
 	
 	//.root file name for position, size and detectors
 	//man->OpenFile("75cmIDpos"+DDPosStr.str()+"cmDDpos_"+DDSizeStr.str()+"mmDD_ID"+IDStr+"DD"+DDStr+"4deg.root");
+	
+	//finding time to define .root file names
+	time_t now = time(0);
+	tm *ltm = localtime(&now);
+	std::stringstream ss;
+	ss << ltm->tm_hour << ltm->tm_min << ltm->tm_sec;
+	std::string filename = "simulation_" + ss.str() + ".root";
+	G4cout << "Output ROOT file: " << filename << G4endl;
+	
+	man->OpenFile(ss.str()+".root");
 }
 
 void MyRunAction::EndOfRunAction(const G4Run*)

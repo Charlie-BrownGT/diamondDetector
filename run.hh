@@ -6,6 +6,8 @@
 #include "G4Run.hh"
 #include "G4GenericMessenger.hh"
 
+#include <ctime>
+
 #include "globals.hh"
 
 class MyRunAction : public G4UserRunAction

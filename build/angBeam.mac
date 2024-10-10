@@ -2,10 +2,10 @@
 /DDPos2/DDPosition 70
 /DDSize/DDSize 10.
 /DDSize2/DDSize 10.
-/DetectorsOnOrOff/ID 0
-/DetectorsOnOrOff2/ID 0
-/DetectorsOnOrOff/DD 1
-/DetectorsOnOrOff2/DD 1
+/DetectorsOnOrOff/ID 1
+/DetectorsOnOrOff2/ID 1
+/DetectorsOnOrOff/DD 0
+/DetectorsOnOrOff2/DD 0
 /run/reinitializeGeometry
 
 
