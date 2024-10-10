@@ -61,7 +61,7 @@ void MyRunAction::BeginOfRunAction(const G4Run* run)
 	if (DD == 0){DDStr = "Off";}
 	
 	//.root file varing angular distribution
-	//man->OpenFile("75cmIDpos"+DDPosStr.str()+"cmDDpos_"+DDSizeStr.str()+"mmDD_ID"+IDStr+"DD"+DDStr+strRunID.str()+"deg.root");
+	man->OpenFile("75cmIDpos"+DDPosStr.str()+"cmDDpos_"+DDSizeStr.str()+"mmDD_ID"+IDStr+"DD"+DDStr+strRunID.str()+"deg.root");
 	
 	//.root file name for position, size and detectors
 	//man->OpenFile("75cmIDpos"+DDPosStr.str()+"cmDDpos_"+DDSizeStr.str()+"mmDD_ID"+IDStr+"DD"+DDStr+"4deg.root");
@@ -74,7 +74,7 @@ void MyRunAction::BeginOfRunAction(const G4Run* run)
 	std::string filename = "simulation_" + ss.str() + ".root";
 	G4cout << "Output ROOT file: " << filename << G4endl;
 	
-	man->OpenFile(ss.str()+".root");
+	//man->OpenFile(ss.str()+".root");
 }
 
 void MyRunAction::EndOfRunAction(const G4Run*)

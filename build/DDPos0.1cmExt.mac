@@ -1,0 +1,7 @@
+#/gps/ang/sigma_r {sigmaR} deg
+#/run/beamOn 100000
+
+/DDPos/DDPosition {pos}
+/DDPos2/DDPosition {pos}
+/run/reinitializeGeometry
+/run/beamOn 100000

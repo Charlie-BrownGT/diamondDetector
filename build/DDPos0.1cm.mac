@@ -1,0 +1,10 @@
+/DDSize/DDSize 10.
+/DDSize2/DDSize 10.
+/DetectorsOnOrOff/ID 0
+/DetectorsOnOrOff2/ID 0
+/DetectorsOnOrOff/DD 1
+/DetectorsOnOrOff2/DD 1
+/run/reinitializeGeometry
+
+/control/loop DDPos0.1cmExt.mac pos 40 80 0.1
+/control/execute vis.mac
