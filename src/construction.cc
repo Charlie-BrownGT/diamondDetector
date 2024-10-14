@@ -22,7 +22,6 @@ MyDetectorConstruction::MyDetectorConstruction()
 	iMessenger->DeclareProperty("ID", ID, "ID on = 1, off = 0"); 
 	iMessenger->DeclareProperty("DD", DD, "DD on = 1, off = 0"); 
 	
-	
 	DefineMaterials();
 }
 

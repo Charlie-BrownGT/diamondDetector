@@ -29,7 +29,7 @@ MyRunAction::MyRunAction()
 	man->FinishNtuple(0);
 	
 	man->CreateNtuple("RunID", "RunID");
-	man->CreateNtupleIColumn("RunID");
+	man->CreateNtupleDColumn("RunID");
 	man->FinishNtuple(1);
 }
 
@@ -83,10 +83,10 @@ void MyRunAction::EndOfRunAction(const G4Run* run)
 {
 	G4AnalysisManager *man = G4AnalysisManager::Instance();
 	
-	G4int runID = run->GetRunID();
+	G4double runID = run->GetRunID();
 	G4cout << runID << G4endl;
 	
-	man->FillNtupleIColumn(1, 0, runID);
+	man->FillNtupleDColumn(1, 0, runID);
 	man->AddNtupleRow(1);
 	
 	man->Write();
