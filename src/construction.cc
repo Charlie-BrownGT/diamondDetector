@@ -73,7 +73,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	G4VisAttributes* visAttributesDD = new G4VisAttributes(G4Colour(0.0, 1.0, 0.0)); // Green color
 	visAttributesDD->SetVisibility(true);
 	visAttributesDD->SetForceSolid(true);
-	logicDD->SetVisAttributes(visAttributesDD);
+	//logicDD->SetVisAttributes(visAttributesDD);
 	physDD = new G4PVPlacement(0, DDposition, logicDD, "physDD", logicWorld, false, 0, true);
 	
 	solidID = new G4Tubs("solidID", innerRadius, outerRadius, hz, startAngle, spanningAngle);      
@@ -81,7 +81,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	G4VisAttributes* visAttributesID = new G4VisAttributes(G4Colour(1.0, 0.0, 0.0)); // Red color
 	visAttributesID->SetVisibility(true);
 	visAttributesID->SetForceSolid(true);
-	logicID->SetVisAttributes(visAttributesID);
+	//logicID->SetVisAttributes(visAttributesID);
 	physID = new G4PVPlacement(0, IDposition, logicID, "physID", logicWorld, false, 0);
 	
 	solidSD = new G4Box("solidSD", xWorld/nRows, yWorld/nCols, 0.01*m);
