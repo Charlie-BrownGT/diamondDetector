@@ -36,13 +36,31 @@ void MyDetectorConstruction::DefineMaterials()
 	G4double z, a;
 	G4double density = 1.e-25*g/cm3, pressure = 1.e-5*pascal, temperature = 2.73 * kelvin;
 	vacuum = new G4Material("Vacuum", z=1., a=1.008 * g/mole, density, kStateGas, temperature, pressure);
-	C  = new G4Element("Carbon","C" , 6., 12.00*g/mole);
-	F  = new G4Element("Flourine","F" , 9., 38.00*g/mole);
+	C = new G4Element("Carbon","C" , 6., 12.00*g/mole);
+	F = new G4Element("Flourine","F" , 9., 38.00*g/mole);
 	diamond = new G4Material("diamond", 3.515*g/cm3, 1);
 	diamond->AddElement(C, 100.0*perCent);
 	CF4 = new G4Material("CF4", 88*g/mole, 2);
 	CF4->AddElement(C, 13.65*perCent);
 	CF4->AddElement(F, 86.35*perCent);
+	
+	//YAPCe crystal elements defined here
+	YAPCe = new G4Material("YAPCe", 5.37*g/cm3, 4);
+	Y = nist->FindOrBuildElement("Y");
+	Ce = nist->FindOrBuildElement("Ce");
+	Al = nist->FindOrBuildElement("Al");
+	O = nist->FindOrBuildElement("O");
+	YAPCe->AddElement(Y, 14.75*perCent);
+	YAPCe->AddElement(Ce, 0.25*perCent);
+	YAPCe->AddElement(Al, 25.*perCent);
+	YAPCe->AddElement(O, 60.*perCent);
+	
+	//YAPCe properties defined here
+	G4double rindexYAPCe[2] = {1.95, 1.95};
+	G4double energy[2] = {1.239841939*eV/0.9, 1.239841939*eV/0.2};
+	G4MaterialPropertiesTable *mptYAPCe = new G4MaterialPropertiesTable();
+	mptYAPCe->AddProperty("RINDEX", energy, rindexYAPCe, 2);
+	YAPCe->SetMaterialPropertiesTable(mptYAPCe);
 }
 
 G4VPhysicalVolume *MyDetectorConstruction::Construct()
@@ -56,7 +74,6 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	DDSizexy = DDSize*mm;
 	//G4double diamondSize = 10.0*mm;
 	
-	
 	G4double diamondZ = 0.25*mm;
 	G4ThreeVector DDposition(0., 0., DDPositionz);
 	G4ThreeVector IDposition(0., 0., 85.*cm); //ID hz = 10cm
@@ -68,7 +85,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	physWorld = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.*cm), logicWorld, "physWorld", 0, false, 0, true);
 	
 	solidDD = new G4Box("solidDD", DDSizexy, DDSizexy, diamondZ);
-	logicDD = new G4LogicalVolume(solidDD, diamond, "logicDD");
+	logicDD = new G4LogicalVolume(solidDD, YAPCe, "logicDD");
 	G4VisAttributes* visAttributesDD = new G4VisAttributes(G4Colour(0.0, 1.0, 0.0)); // Green color
 	visAttributesDD->SetVisibility(true);
 	visAttributesDD->SetForceSolid(true);
@@ -100,10 +117,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 
 void MyDetectorConstruction::ConstructSDandField()
 {
-	//varying detector usage here, detectors are turned on and off via the variable definitions SD, ID and DD	
-	//G4cout << SD << G4endl;
-	//G4cout << ID << G4endl;
-	//G4cout << DD << G4endl;
+	//varying detector usage here, detectors are turned on and off via the variable definitions SD, ID and DD
 	
 	if(SD == 1){
 		MySensitiveDetector *sensSD = new MySensitiveDetector("SD");

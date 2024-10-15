@@ -36,8 +36,8 @@ private:
 	G4Tubs *solidID;
 	G4LogicalVolume *logicWorld;
 	G4VPhysicalVolume *physWorld, *physDD, *physSD, *physID;
-	G4Material *vacuum, *diamond, *CF4;
-	G4Element *C, *F;
+	G4Material *vacuum, *diamond, *CF4, *YAPCe;
+	G4Element *C, *F, *Y, *Ce, *Al, *O;
 	
 	//defining user message on SD
 	G4int nCols, nRows;
