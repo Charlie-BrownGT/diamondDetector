@@ -31,17 +31,21 @@ private:
 	//virtual void ConstructSDandField();
 	
 	//defining the stuff for the user defined message
-	G4LogicalVolume *logicSD, *logicID, *logicDD;
-	G4Box *solidWorld, *solidDD, *solidSD;
+	G4VPhysicalVolume *physWorld, *physDD, *physSD, *physID, *physFinger;
+	G4LogicalVolume *logicSD, *logicID, *logicDD, *logicFinger;
+	G4Box *solidWorld, *solidDD, *solidSD, *solidFinger;
+	
 	G4Tubs *solidID;
 	G4LogicalVolume *logicWorld;
-	G4VPhysicalVolume *physWorld, *physDD, *physSD, *physID;
+	
 	G4Material *vacuum, *diamond, *CF4, *YAPCe;
 	G4Element *C, *F, *Y, *Ce, *Al, *O;
 	
 	//defining user message on SD
 	G4int nCols, nRows;
 	G4GenericMessenger *fMessenger;
+
+	G4double FingerPositionZ;
 	
 	G4double DDPositionz, DDPosition;
 	G4GenericMessenger *gMessenger;
