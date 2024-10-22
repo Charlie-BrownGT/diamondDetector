@@ -1,7 +1,7 @@
 #set particle type, origin position and direction
 /gps/particle ion
 /gps/energy 80 MeV
-/gps/ion 11 21 11 0
+/gps/ion 10 18 10 0
 /gps/pos/centre 0 0 0 
 /gps/direction 0 0 1
 
