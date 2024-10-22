@@ -61,6 +61,11 @@ void MyDetectorConstruction::DefineMaterials()
 	G4MaterialPropertiesTable *mptYAPCe = new G4MaterialPropertiesTable();
 	mptYAPCe->AddProperty("RINDEX", energy, rindexYAPCe, 2);
 	YAPCe->SetMaterialPropertiesTable(mptYAPCe);
+
+	//Fe for beam define here
+	FeMat = new G4Material("Fe", 7.874*g/cm3, 1);
+	Fe = nist->FindOrBuildElement("Fe");
+	FeMat->AddElement(Fe, 100.*perCent);
 }
 
 G4VPhysicalVolume *MyDetectorConstruction::Construct()
@@ -115,7 +120,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	}
 
 	solidFinger = new G4Box("solidFinger", 0.2*m, 0.005*m, 0.001*m);
-	logicFinger = new G4LogicalVolume(solidFinger, vacuum, "logicFinger");
+	logicFinger = new G4LogicalVolume(solidFinger, FeMat, "logicFinger");
 	G4VisAttributes* visAttributesF = new G4VisAttributes(G4Colour(0.0, 0.0, 1.0)); // Green color
 	visAttributesF->SetVisibility(true);
 	visAttributesF->SetForceSolid(true);

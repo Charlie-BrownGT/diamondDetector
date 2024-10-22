@@ -38,8 +38,8 @@ private:
 	G4Tubs *solidID;
 	G4LogicalVolume *logicWorld;
 	
-	G4Material *vacuum, *diamond, *CF4, *YAPCe;
-	G4Element *C, *F, *Y, *Ce, *Al, *O;
+	G4Material *vacuum, *diamond, *CF4, *YAPCe, *FeMat;
+	G4Element *C, *F, *Y, *Ce, *Al, *O, *Fe;
 	
 	//defining user message on SD
 	G4int nCols, nRows;

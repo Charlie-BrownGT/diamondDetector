@@ -65,8 +65,8 @@ void MyRunAction::BeginOfRunAction(const G4Run* run)
 	if (DD == 0){DDStr = "Off";}
 	
 	//different root file name options
-	man->OpenFile("RunID:"+strRunID1.str()+".root");
-	//man->OpenFile("75cmIDpos"+DDPosStr.str()+"cmDDpos_"+DDSizeStr.str()+"mmDD_ID"+IDStr+"DD"+DDStr+strRunID.str()+"deg.root");
+	//man->OpenFile("RunID:"+strRunID1.str()+".root");
+	man->OpenFile("75cmIDpos"+DDPosStr.str()+"cmDDpos_"+DDSizeStr.str()+"mmDD_ID"+IDStr+"DD"+DDStr+strRunID.str()+"deg.root");
 	//man->OpenFile("75cmIDpos"+DDPosStr.str()+"cmDDpos_"+DDSizeStr.str()+"mmDD_ID"+IDStr+"DD"+DDStr+"4deg.root");
 	
 	//finding time to define .root file names
