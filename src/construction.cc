@@ -83,7 +83,8 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	G4double diamondZ = 0.25*mm;
 	G4ThreeVector DDposition(0., 0., DDPositionz);
 	G4ThreeVector IDposition(0., 0., 85.*cm); //ID hz = 10cm
-	G4ThreeVector fingerPosition(0.195*m, 0, FingerPositionZ);
+	//G4ThreeVector fingerPosition(0.195*m, 0, FingerPositionZ);
+	G4ThreeVector fingerPosition(0.0*m, 0, FingerPositionZ);
 	G4double physSDz = 0.99*m;
 	
 	//volumes defined here
@@ -119,7 +120,8 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 		}
 	}
 
-	solidFinger = new G4Box("solidFinger", 0.2*m, 0.005*m, 0.001*m);
+	//solidFinger = new G4Box("solidFinger", 0.2*m, 0.005*m, 0.001*m);
+	solidFinger = new G4Box("solidFinger", 0.4*m, 0.005*m, 0.001*m);
 	logicFinger = new G4LogicalVolume(solidFinger, FeMat, "logicFinger");
 	G4VisAttributes* visAttributesF = new G4VisAttributes(G4Colour(0.0, 0.0, 1.0)); // Green color
 	visAttributesF->SetVisibility(true);
