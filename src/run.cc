@@ -66,7 +66,7 @@ void MyRunAction::BeginOfRunAction(const G4Run* run)
 	
 	//different root file name options
 	//man->OpenFile("RunID:"+strRunID1.str()+".root");
-	man->OpenFile("75cmIDpos"+DDPosStr.str()+"cmDDpos_"+DDSizeStr.str()+"mmDD_ID"+IDStr+"DD"+DDStr+strRunID.str()+"deg.root");
+	//man->OpenFile("75cmIDpos"+DDPosStr.str()+"cmDDpos_"+DDSizeStr.str()+"mmDD_ID"+IDStr+"DD"+DDStr+strRunID.str()+"deg.root");
 	//man->OpenFile("75cmIDpos"+DDPosStr.str()+"cmDDpos_"+DDSizeStr.str()+"mmDD_ID"+IDStr+"DD"+DDStr+"4deg.root");
 	
 	//finding time to define .root file names
@@ -76,7 +76,7 @@ void MyRunAction::BeginOfRunAction(const G4Run* run)
 	ss << ltm->tm_hour << ltm->tm_min << ltm->tm_sec;
 	std::string filename = "simulation_" + ss.str() + ".root";
 	G4cout << "Output ROOT file: " << filename << G4endl;
-	//man->OpenFile(ss.str()+".root");
+	man->OpenFile(ss.str()+".root");
 }
 
 void MyRunAction::EndOfRunAction(const G4Run* run)

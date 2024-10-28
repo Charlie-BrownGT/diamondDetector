@@ -1,7 +1,7 @@
 CMakeFiles/sim.dir/src/construction.cc.o: \
- /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/src/construction.cc \
+ /home/guy/software/geant4/projects/diamondDetector/src/construction.cc \
  /usr/include/stdc-predef.h \
- /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/include/construction.hh \
+ /home/guy/software/geant4/projects/diamondDetector/include/construction.hh \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -362,7 +362,7 @@ CMakeFiles/sim.dir/src/construction.cc.o: \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4UImessenger.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4UIdirectory.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/globals.hh \
- /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/include/detector.hh \
+ /home/guy/software/geant4/projects/diamondDetector/include/detector.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VSensitiveDetector.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4CollectionNameVector.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4HCofThisEvent.hh \

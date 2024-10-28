@@ -1,5 +1,5 @@
 CMakeFiles/sim.dir/sim.cc.o: \
- /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/sim.cc \
+ /home/guy/software/geant4/projects/diamondDetector/sim.cc \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -644,7 +644,7 @@ CMakeFiles/sim.dir/sim.cc.o: \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4UIsession.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4coutDestination.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4UIbatch.hh \
- /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/include/construction.hh \
+ /home/guy/software/geant4/projects/diamondDetector/include/construction.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4SystemOfUnits.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VUserDetectorConstruction.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VPhysicalVolume.hh \
@@ -664,7 +664,7 @@ CMakeFiles/sim.dir/sim.cc.o: \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4AnyMethod.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4AnyType.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/globals.hh \
- /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/include/detector.hh \
+ /home/guy/software/geant4/projects/diamondDetector/include/detector.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VSensitiveDetector.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4CollectionNameVector.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VReadOutGeometry.hh \
@@ -732,7 +732,7 @@ CMakeFiles/sim.dir/sim.cc.o: \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4GenericFileManager.icc \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4Run.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4UserRunAction.hh \
- /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/include/physics.hh \
+ /home/guy/software/geant4/projects/diamondDetector/include/physics.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VModularPhysicsList.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VPhysicsConstructor.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4PhysicsListHelper.hh \
@@ -933,9 +933,9 @@ CMakeFiles/sim.dir/sim.cc.o: \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4IonElasticPhysics.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4IonPhysicsXS.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4IonPhysics.hh \
- /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/include/action.hh \
+ /home/guy/software/geant4/projects/diamondDetector/include/action.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VUserActionInitialization.hh \
- /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/include/generator.hh \
+ /home/guy/software/geant4/projects/diamondDetector/include/generator.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VUserPrimaryGeneratorAction.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4ParticleGun.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VPrimaryGenerator.hh \
@@ -949,4 +949,4 @@ CMakeFiles/sim.dir/sim.cc.o: \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4GeneralParticleSourceMessenger.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4GeneralParticleSourceData.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4ParticleTable.hh \
- /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/include/run.hh
+ /home/guy/software/geant4/projects/diamondDetector/include/run.hh

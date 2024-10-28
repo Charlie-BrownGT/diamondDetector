@@ -1,7 +1,7 @@
 CMakeFiles/sim.dir/src/run.cc.o: \
- /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/src/run.cc \
+ /home/guy/software/geant4/projects/diamondDetector/src/run.cc \
  /usr/include/stdc-predef.h \
- /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/include/run.hh \
+ /home/guy/software/geant4/projects/diamondDetector/include/run.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4UserRunAction.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4Types.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4GlobalConfig.hh \
@@ -339,7 +339,7 @@ CMakeFiles/sim.dir/src/run.cc.o: \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4AnyMethod.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4AnyType.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/globals.hh \
- /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/include/construction.hh \
+ /home/guy/software/geant4/projects/diamondDetector/include/construction.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4SystemOfUnits.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/CLHEP/Units/SystemOfUnits.h \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VUserDetectorConstruction.hh \
@@ -430,7 +430,7 @@ CMakeFiles/sim.dir/src/run.cc.o: \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4Color.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VisAttributes.icc \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4Colour.hh \
- /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/include/detector.hh \
+ /home/guy/software/geant4/projects/diamondDetector/include/detector.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VSensitiveDetector.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4CollectionNameVector.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4HCofThisEvent.hh \
