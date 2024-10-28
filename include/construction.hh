@@ -28,7 +28,6 @@ public:
 	virtual void ConstructSDandField();
 	
 private:
-	//virtual void ConstructSDandField();
 	
 	//defining the stuff for the user defined message
 	G4VPhysicalVolume *physWorld, *physDD, *physSD, *physID, *physFinger;
@@ -56,6 +55,7 @@ private:
 	G4int SD, ID, DD;
 	G4GenericMessenger *iMessenger;
 	
+	//virtual void ConstructSDandField();
 	void DefineMaterials();
 };
 #endif
