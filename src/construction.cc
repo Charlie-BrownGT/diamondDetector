@@ -2,11 +2,11 @@
 
 MyDetectorConstruction::MyDetectorConstruction()
 {
+	nCols = 10; 
+	nRows = 10; 
 	fMessenger = new G4GenericMessenger(this, "/Sdetector/", "SDetector Construction");
 	fMessenger->DeclareProperty("nCols", nCols, "Number of columns in SD");
 	fMessenger->DeclareProperty("nRows", nRows, "Number of rows in SD");
-	nCols = 2; 
-	nRows = 2; 
 	
 	DDPosition = 40.;
 	gMessenger = new G4GenericMessenger(this, "/DDPos/", "DD position in z (cm)");
@@ -16,7 +16,7 @@ MyDetectorConstruction::MyDetectorConstruction()
 	hMessenger = new G4GenericMessenger(this, "/DDSize/", "DD size in x and y(mm)");
 	hMessenger->DeclareProperty("DDSize", DDSize, "Size of DD in x and y(mm)");
 	
-	SD = 0, ID = 1, DD = 1;
+	SD = 0, ID = 0, DD = 1;
 	iMessenger = new G4GenericMessenger(this, "/DetectorsOnOrOff/", "Detector status");
 	iMessenger->DeclareProperty("SD", SD, "SD on = 1, off = 0"); 
 	iMessenger->DeclareProperty("ID", ID, "ID on = 1, off = 0"); 
@@ -105,10 +105,9 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	
 	solidDD = new G4Box("solidDD", DDSizexy/nRows, DDSizexy/nCols, diamondZ);
 	logicDD = new G4LogicalVolume(solidDD, YAPCe, "logicDD");
-	
 	for(G4int i = 0; i < nRows; i++){
 		for(G4int j = 0; j < nCols; j++){
-			physDD = new G4PVPlacement(0, G4ThreeVector((-DDSizexy/2)*mm+(i+0.5)*mm/nRows, (-DDSizexy/2)*mm+(j+0.5)*mm/nRows, DDPositionz), logicDD, "physDD", logicWorld, false, j+i*nCols, false);
+			physDD = new G4PVPlacement(0, G4ThreeVector(-DDSizexy*0.5*mm+(i+0.5)*mm/nRows, -DDSizexy*0.5*mm+(j+0.5)*mm/nRows, DDPositionz), logicDD, "physDD", logicWorld, false, j+i*nCols, false);
 		}
 	}
 	

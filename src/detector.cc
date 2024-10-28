@@ -29,9 +29,9 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
 	
 	G4AnalysisManager *man = G4AnalysisManager::Instance();
 	man->FillNtupleIColumn(0, evt);
-	man->FillNtupleDColumn(1, posIon[0]);
-	man->FillNtupleDColumn(2, posIon[1]);
-	man->FillNtupleDColumn(3, posIon[2]);
+	man->FillNtupleDColumn(1, posDetector[0]);
+	man->FillNtupleDColumn(2, posDetector[1]);
+	man->FillNtupleDColumn(3, posDetector[2]);
 	man->AddNtupleRow(0);
 	
 	//G4int runID = run->GetRunID();
