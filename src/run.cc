@@ -14,7 +14,7 @@ MyRunAction::MyRunAction()
 	hMessenger2 = new G4GenericMessenger(this, "/DDSize2/", "DD size in x and y(mm)");
 	hMessenger2->DeclareProperty("DDSize", DDSize, "Size of DD in x and y(mm)");
 	
-	SD = 0, ID = 1, DD = 1;
+	SD = 0, ID = 0, DD = 1;
 	iMessenger2 = new G4GenericMessenger(this, "/DetectorsOnOrOff2/", "Detector status");
 	iMessenger2->DeclareProperty("SD", SD, "SD on = 1, off = 0"); 
 	iMessenger2->DeclareProperty("ID", ID, "ID on = 1, off = 0"); 
@@ -68,6 +68,7 @@ void MyRunAction::BeginOfRunAction(const G4Run* run)
 	//man->OpenFile("RunID:"+strRunID1.str()+".root");
 	//man->OpenFile("75cmIDpos"+DDPosStr.str()+"cmDDpos_"+DDSizeStr.str()+"mmDD_ID"+IDStr+"DD"+DDStr+strRunID.str()+"deg.root");
 	//man->OpenFile("75cmIDpos"+DDPosStr.str()+"cmDDpos_"+DDSizeStr.str()+"mmDD_ID"+IDStr+"DD"+DDStr+"4deg.root");
+	man->OpenFile("100cm_20mm"+strRunID1.str()+"deg.root");
 	
 	//finding time to define .root file names
 	time_t now = time(0);
@@ -76,7 +77,7 @@ void MyRunAction::BeginOfRunAction(const G4Run* run)
 	ss << ltm->tm_hour << ltm->tm_min << ltm->tm_sec;
 	std::string filename = "simulation_" + ss.str() + ".root";
 	G4cout << "Output ROOT file: " << filename << G4endl;
-	man->OpenFile(ss.str()+".root");
+	//man->OpenFile(ss.str()+".root");
 }
 
 void MyRunAction::EndOfRunAction(const G4Run* run)

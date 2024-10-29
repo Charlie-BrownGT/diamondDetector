@@ -1,7 +1,7 @@
 CMakeFiles/sim.dir/src/physics.cc.o: \
- /home/guy/software/geant4/projects/diamondDetector/src/physics.cc \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/src/physics.cc \
  /usr/include/stdc-predef.h \
- /home/guy/software/geant4/projects/diamondDetector/include/physics.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/include/physics.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VModularPhysicsList.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VPhysicsConstructor.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4ParticleTable.hh \

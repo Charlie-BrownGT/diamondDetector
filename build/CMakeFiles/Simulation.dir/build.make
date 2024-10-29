@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/guy/software/geant4/projects/diamondDetector
+CMAKE_SOURCE_DIR = /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/guy/software/geant4/projects/diamondDetector/build
+CMAKE_BINARY_DIR = /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/build
 
 # Utility rule file for Simulation.
 
@@ -81,6 +81,6 @@ CMakeFiles/Simulation.dir/clean:
 .PHONY : CMakeFiles/Simulation.dir/clean
 
 CMakeFiles/Simulation.dir/depend:
-	cd /home/guy/software/geant4/projects/diamondDetector/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/guy/software/geant4/projects/diamondDetector /home/guy/software/geant4/projects/diamondDetector /home/guy/software/geant4/projects/diamondDetector/build /home/guy/software/geant4/projects/diamondDetector/build /home/guy/software/geant4/projects/diamondDetector/build/CMakeFiles/Simulation.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/build /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/build /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/projects/diamondDetector/build/CMakeFiles/Simulation.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Simulation.dir/depend
 

@@ -8,7 +8,7 @@ MyDetectorConstruction::MyDetectorConstruction()
 	fMessenger->DeclareProperty("nCols", nCols, "Number of columns in SD");
 	fMessenger->DeclareProperty("nRows", nRows, "Number of rows in SD");
 	
-	DDPosition = 40.;
+	DDPosition = 100.;
 	gMessenger = new G4GenericMessenger(this, "/DDPos/", "DD position in z (cm)");
 	gMessenger->DeclareProperty("DDPosition", DDPosition, "Position of DD in z (cm)");
 	
@@ -16,7 +16,7 @@ MyDetectorConstruction::MyDetectorConstruction()
 	hMessenger = new G4GenericMessenger(this, "/DDSize/", "DD size in x and y(mm)");
 	hMessenger->DeclareProperty("DDSize", DDSize, "Size of DD in x and y(mm)");
 	
-	SD = 0, ID = 1, DD = 1;
+	SD = 0, ID = 0, DD = 1;
 	iMessenger = new G4GenericMessenger(this, "/DetectorsOnOrOff/", "Detector status");
 	iMessenger->DeclareProperty("SD", SD, "SD on = 1, off = 0"); 
 	iMessenger->DeclareProperty("ID", ID, "ID on = 1, off = 0"); 
@@ -71,7 +71,7 @@ void MyDetectorConstruction::DefineMaterials()
 G4VPhysicalVolume *MyDetectorConstruction::Construct()
 {
 	//detector sizes and positions defined here, note, G4 draws a 0.5m box as 1m3
-	G4double xWorld = 0.5*m, yWorld = 0.5*m, zWorld = 1.*m;
+	G4double xWorld = 0.5*m, yWorld = 0.5*m, zWorld = 1.5*m;
 	G4double innerRadius = 0*cm, outerRadius = 40*cm, hz = 10*cm, startAngle = 0.*deg, spanningAngle = 360.*deg;
 	
 	DDPositionz = DDPosition*cm;
@@ -82,10 +82,10 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	
 	G4double diamondZ = 0.25*mm;
 	G4ThreeVector DDposition(0., 0., DDPositionz);
-	G4ThreeVector IDposition(0., 0., 85.*cm); //ID hz = 10cm
+	G4ThreeVector IDposition(0., 0., 118.5*cm); //ID hz = 10cm
 	//G4ThreeVector fingerPosition(0.195*m, 0, FingerPositionZ);
 	G4ThreeVector fingerPosition(0.0*m, 0, FingerPositionZ);
-	G4double physSDz = 0.99*m;
+	G4double physSDz = 1.49*m;
 	
 	//volumes defined here
 	solidWorld = new G4Box("solidWorld", xWorld, yWorld, zWorld);
