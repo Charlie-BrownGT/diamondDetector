@@ -1,10 +1,13 @@
-/DDSize/DDSize 10.
-/DDSize2/DDSize 10.
+/DDPos/DDPosition 100
+/DDPos2/DDPosition 100
+/DDSize/DDSize 5.
+/DDSize2/DDSize 5.
 /DetectorsOnOrOff/ID 0
 /DetectorsOnOrOff2/ID 0
 /DetectorsOnOrOff/DD 1
 /DetectorsOnOrOff2/DD 1
 /run/reinitializeGeometry
 
-/control/loop DDPos0.1cmExt.mac pos 40 80 0.1
+/control/loop angBeamExt.mac sigmaR 0 1 0.1
+/run/beamOn 100000
 /control/execute vis.mac
