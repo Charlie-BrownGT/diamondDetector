@@ -2,15 +2,15 @@
 
 MyPrimaryGenerator::MyPrimaryGenerator()
 {
-	particleGun = new G4GeneralParticleSource();
+	particleSource = new G4GeneralParticleSource();
 }
 
 MyPrimaryGenerator::~MyPrimaryGenerator()
 {
-	delete particleGun;
+	delete particleSource;
 }
 
 void MyPrimaryGenerator::GeneratePrimaries(G4Event *anEvent)
 {
-	particleGun -> GeneratePrimaryVertex(anEvent);
+	particleSource->GeneratePrimaryVertex(anEvent);
 }

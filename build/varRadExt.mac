@@ -1,0 +1,5 @@
+#/gps/ang/sigma_r {sigmaR} deg
+#/run/beamOn 100000
+
+/gps/pos/radius {radius} mm
+/run/beamOn 100000

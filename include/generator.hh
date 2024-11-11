@@ -16,6 +16,6 @@ public:
         virtual void GeneratePrimaries(G4Event*);
 
 private:
-	G4GeneralParticleSource* particleGun;
+        G4GeneralParticleSource* particleSource;
 };
 #endif

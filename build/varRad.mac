@@ -8,6 +8,6 @@
 /DetectorsOnOrOff2/DD 1
 /run/reinitializeGeometry
 
-/control/loop varAngExt.mac theta 0 5. 1.
-/run/beamOn 10000
+/control/loop varRadExt.mac radius 0 8 1.
+/run/beamOn 100000
 /control/execute vis.mac
