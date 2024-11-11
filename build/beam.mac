@@ -1,5 +1,4 @@
 # Define particle type (e.g., electrons)
-#/gps/particle e-
 /gps/particle ion
 /gps/energy 124 MeV
 /gps/ion 10 18 10 0
@@ -12,8 +11,8 @@
 
 # Define the angular distribution type (cosine distribution to create a spread)
 /gps/ang/type cos
-/gps/ang/mintheta 0 deg
-/gps/ang/maxtheta 5 deg
+/gps/ang/mintheta 0. deg
+/gps/ang/maxtheta 5. deg
 
 # Set the energy distribution type (monoenergetic in this case)
 /gps/ene/type Mono
@@ -23,9 +22,9 @@
 #/gps/direction 0 0 1
 
 # the incident surface is in the x-y plane
-#/gps/pos/rot1 1 0 0
-#/gps/pos/rot2 0 1 0
+/gps/pos/rot1 1 0 0
+/gps/pos/rot2 0 1 0
 
 # the beam is travelling along the Z_axis with 3 degrees dispersion
-#/gps/ang/rot1 0 1 0
-#/gps/ang/rot2 1 0 0
+/gps/ang/rot1 0 1 0
+/gps/ang/rot2 1 0 0

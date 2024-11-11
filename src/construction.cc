@@ -81,11 +81,11 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	//G4double diamondSize = 10.0*mm;
 	
 	G4double diamondZ = 0.25*mm;
-	G4ThreeVector DDposition(0., 0., -DDPositionz);
-	G4ThreeVector IDposition(0., 0., -118.5*cm); //ID hz = 10cm
+	G4ThreeVector DDposition(0., 0., DDPositionz);
+	G4ThreeVector IDposition(0., 0., 118.5*cm); //ID hz = 10cm
 	//G4ThreeVector fingerPosition(0.195*m, 0, FingerPositionZ);
 	G4ThreeVector fingerPosition(0.0*m, 0, FingerPositionZ);
-	G4double physSDz = -1.49*m;
+	G4double physSDz = 1.49*m;
 	
 	//volumes defined here
 	solidWorld = new G4Box("solidWorld", xWorld, yWorld, zWorld);
