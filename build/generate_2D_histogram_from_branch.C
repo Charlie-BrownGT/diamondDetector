@@ -63,8 +63,8 @@ void generate_2D_histogram_from_branch(const char *dirname="/home/guy/software/g
 		strcpy(pngFile2, detStat);
 		std::cout << pngFile2 << std::endl;
 		
-		// Create a 2D histogram (1000x1000 bins, with ranges for both axes)
-		TH2F *hist2d = new TH2F("hist2d", detStat, 50, -5, 5, 50, -5, 5);
+		// Create a 2D histogram (1000x1000 bins, with ranges for both axes), set the scale for the 2D axis here
+		TH2F *hist2d = new TH2F("hist2d", detStat, 50, -10, 10, 50, -10, 10);
 
 		// Set branch addresses, replace with respective branch names
 		tree->SetBranchAddress("X", &branch1_value);  
@@ -93,7 +93,8 @@ void generate_2D_histogram_from_branch(const char *dirname="/home/guy/software/g
 		int nPoints = 1000;
 		double x_vals[nPoints], y_vals[nPoints];
 
-		double xMin = -5.1, xMax = 5.1;
+		//set the scale for the 1D axis here
+		double xMin = -10.1, xMax = 10.1;
 		double xPrec = (xMax - xMin) / nPoints;
 
 		xCounter = xMin;
