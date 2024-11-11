@@ -30,7 +30,6 @@ void generate_2D_histogram_from_branch(const char *dirname="/home/guy/software/g
 	Long64_t nEntries;
 	double testArr[1024];
 	
-
 	// Set up variables to hold branch values
 	double branch1_value, branch2_value;
 
@@ -62,6 +61,7 @@ void generate_2D_histogram_from_branch(const char *dirname="/home/guy/software/g
 		detStat[strLength] = '\0';
 		strcpy(pngFile, detStat);
 		strcpy(pngFile2, detStat);
+		std::cout << pngFile2 << std::endl;
 		
 		// Create a 2D histogram (1000x1000 bins, with ranges for both axes)
 		TH2F *hist2d = new TH2F("hist2d", detStat, 50, -5, 5, 50, -5, 5);
@@ -110,7 +110,6 @@ void generate_2D_histogram_from_branch(const char *dirname="/home/guy/software/g
 			}
 			//fills the observed events in y into testArr
 			testArr[arrCounter] = yCounter;
-			//cout << testArr[arrCounter] << endl;
 			
 			//creates seperate arrays for the plot
 			x_vals[arrCounter] = xCounter;
@@ -122,7 +121,9 @@ void generate_2D_histogram_from_branch(const char *dirname="/home/guy/software/g
 		}
 
 		TGraph *graph = new TGraph(nPoints, x_vals, y_vals);
-		graph->SetTitle("Observations against Angular Distribution; Spatial Distribution on X (mm); Observations (N)");
+		graph->SetTitle(detStat);
+		graph->GetXaxis()->SetTitle("Crystal surface X (mm)");
+    	graph->GetYaxis()->SetTitle("Observations (N)");
 		graph->SetMarkerStyle(20);   
 		graph->SetMarkerSize(0.5);   
 		graph->SetMarkerColor(kBlue);

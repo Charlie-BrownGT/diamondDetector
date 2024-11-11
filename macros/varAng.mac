@@ -8,6 +8,6 @@
 /DetectorsOnOrOff2/DD 1
 /run/reinitializeGeometry
 
-/control/loop angBeamExt.mac sigmaR 0 1 0.1
+/control/loop varAngExt.mac sigmaR 0 1 0.1
 /run/beamOn 100000
 /control/execute vis.mac

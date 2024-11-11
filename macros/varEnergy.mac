@@ -8,5 +8,5 @@
 /DetectorsOnOrOff2/DD 0
 /run/reinitializeGeometry
 
-/control/loop varBeamEnergyExt.mac deltaE 70 90 1
+/control/loop varEnergyExt.mac deltaE 70 90 1
 /control/execute vis.mac

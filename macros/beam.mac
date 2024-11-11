@@ -1,22 +1,14 @@
-#set particle type, origin position and direction
+# set particle type, origin position and direction
 /gps/particle ion
 /gps/energy 124 MeV
 /gps/ion 10 18 10 0
 /gps/pos/centre 0 0 0 
 /gps/direction 0 0 1
 
-#set beam qualities, option left in for a circuar beam origin type
-#/gps/ang/type planar
-#/gps/pos/type Point
-#/gps/pos/shape Circle
-#/gps/pos/radius 1. mm
-#/gps/pos/sigma_r 2. mm
-
+# set beam qualities, option left in for a circuar beam origin type
 /gps/pos/type Plane
 /gps/pos/shape Circle
-#/gps/pos/centre 0 0 0 cm
 /gps/pos/radius 0. mm
-
 
 # the incident surface is in the x-y plane
 #/gps/pos/rot1 1 0 0
