@@ -1,3 +1,2 @@
 /gps/ang/maxtheta {theta} deg
-/gps/ang/maxphi {theta} deg
-/run/beamOn 10000
+/run/beamOn 100000

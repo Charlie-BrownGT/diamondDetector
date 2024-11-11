@@ -50,7 +50,7 @@ void MyRunAction::BeginOfRunAction(const G4Run* run)
 	G4double runID;
 	G4double runID1 = run->GetRunID();
 	
-	runID = runID1 / 10.;
+	runID = runID1 / 20.;
 	std::stringstream strRunID;
 	strRunID << runID;
 	std::stringstream strRunID1;

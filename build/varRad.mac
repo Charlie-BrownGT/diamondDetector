@@ -9,5 +9,4 @@
 /run/reinitializeGeometry
 
 /control/loop varRadExt.mac radius 0 8 1.
-/run/beamOn 100000
 /control/execute vis.mac
