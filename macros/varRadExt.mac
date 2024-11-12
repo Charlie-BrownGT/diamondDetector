@@ -1,2 +1,2 @@
 /gps/pos/radius {radius} mm
-/run/beamOn 100000
+/run/beamOn 1000

@@ -8,5 +8,18 @@
 /DetectorsOnOrOff2/DD 1
 /run/reinitializeGeometry
 
-/control/loop varRadExt.mac radius 0 10 0.5
+# use there variables to changes the radial beam spread
+
+#set beam qualities
+/gps/pos/type Plane
+/gps/pos/shape Circle
+/gps/pos/radius 0. mm
+
+# the beam is travelling along the Z_axis with 3 degrees dispersion
+/gps/ang/rot1 0 1 0
+/gps/ang/rot2 1 0 0
+/gps/ang/type beam1d
+/gps/ang/sigma_r 0.0 deg
+
+/control/loop varRadExt.mac radius 0 5 0.5
 /control/execute vis.mac

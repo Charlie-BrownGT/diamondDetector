@@ -1,44 +1,30 @@
 # Define particle type (e.g., electrons)
-#/gps/particle ion
-#/gps/energy 124 MeV
-#/gps/ion 10 18 10 0
-#/gps/pos/centre 0 0 0 
+/gps/particle ion
+/gps/energy 124 MeV
+/gps/ion 10 18 10 0
+/gps/pos/centre 0 0 0 
 
 
 # use there variables to changes the angular beam spread
 
 # set beam qualities, option left in for a circular beam origin type
-#/gps/pos/type Surface
-#/gps/pos/shape Circle
-#/gps/pos/radius 0. mm
-
-# Define the angular distribution type (cosine distribution to create a spread)
-#/gps/ang/type cos
-#/gps/ang/mintheta 0. deg
-#/gps/ang/maxtheta 5. deg
-
-# Set the energy distribution type (monoenergetic in this case)
-#/gps/ene/type Mono
-#/gps/ene/mono 124.0 MeV
-
-# the incident surface is in the x-y plane
-#/gps/pos/rot1 1 0 0
-#/gps/pos/rot2 0 1 0
-
-# the beam is travelling along the Z_axis with 3 degrees dispersion
-#/gps/ang/rot1 0 1 0
-#/gps/ang/rot2 1 0 0
-
-
-# use there variables to changes the radial beam spread
-
-#set beam qualities
-/gps/pos/type Plane
+/gps/pos/type Surface
 /gps/pos/shape Circle
 /gps/pos/radius 0. mm
+
+# Define the angular distribution type (cosine distribution to create a spread)
+/gps/ang/type cos
+/gps/ang/mintheta 0. deg
+/gps/ang/maxtheta 5. deg
+
+# Set the energy distribution type (monoenergetic in this case)
+/gps/ene/type Mono
+/gps/ene/mono 124.0 MeV
+
+# the incident surface is in the x-y plane
+/gps/pos/rot1 1 0 0
+/gps/pos/rot2 0 1 0
 
 # the beam is travelling along the Z_axis with 3 degrees dispersion
 /gps/ang/rot1 0 1 0
 /gps/ang/rot2 1 0 0
-/gps/ang/type beam1d
-/gps/ang/sigma_r 0.0 deg
