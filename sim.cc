@@ -27,8 +27,8 @@ int main(int argc, char** argv)
 	G4UIExecutive* ui = 0;
 	
 	if (argc == 1){
-        	ui = new G4UIExecutive(argc, argv);
-    	}
+       	ui = new G4UIExecutive(argc, argv);
+    }
 	
 	G4VisManager *visManager = new G4VisExecutive();
 	visManager->Initialize();
@@ -38,6 +38,7 @@ int main(int argc, char** argv)
 		UImanager->ApplyCommand("/control/execute vis.mac");
 		UImanager->ApplyCommand("/control/execute beam.mac");
 		ui->SessionStart();
+		delete ui;
 	}
 	else{
 		UImanager->ApplyCommand("/control/execute beam.mac");
@@ -45,5 +46,8 @@ int main(int argc, char** argv)
 		G4String fileName = argv[1];
 		UImanager->ApplyCommand(command+fileName);
     	}
-	return 0;
+	//return 0;
+
+	delete visManager;
+  	delete runManager;
 }
