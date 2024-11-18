@@ -1,7 +1,7 @@
 /DDPos/DDPosition 100
 /DDPos2/DDPosition 100
-/DDSize/DDSize 10.
-/DDSize2/DDSize 10.
+/DDSize/DDSize 50.
+/DDSize2/DDSize 50.
 /DetectorsOnOrOff/ID 0
 /DetectorsOnOrOff2/ID 0
 /DetectorsOnOrOff/DD 1
@@ -11,14 +11,19 @@
 # use there variables to changes the angular beam spread
 
 # set beam qualities, option left in for a circular beam origin type
-/gps/pos/type Surface
-/gps/pos/shape Circle
-/gps/pos/radius 0. mm
+#/gps/pos/type Surface
+#/gps/pos/shape Circle
+#/gps/pos/radius 0. mm
+
+/gps/pos/type Plane
+/gps/pos/shape Rectangle
+/gps/pos/halfx 3. mm
+/gps/pos/halfy 4. mm
 
 # Define the angular distribution type (cosine distribution to create a spread)
 /gps/ang/type cos
 /gps/ang/mintheta 0. deg
-/gps/ang/maxtheta 5. deg
+/gps/ang/maxtheta 0. deg
 
 # Set the energy distribution type (monoenergetic in this case)
 /gps/ene/type Mono
@@ -33,5 +38,5 @@
 /gps/ang/rot2 1 0 0
 
 
-/control/loop varAngExt.mac theta 0 30. 0.05
+/control/loop varAngExt.mac theta 0 5. 1.
 /control/execute vis.mac

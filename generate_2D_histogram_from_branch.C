@@ -20,7 +20,7 @@ void generate_2D_histogram_from_branch(const char *dirname="/home/guy/software/g
 			if (!file->IsDirectory() && fname.EndsWith(ext)) {
 				//cout << fname.Data() << endl;
 				filenames[file_count] = new TString(fname);  //allocate and copy
-                    file_count++;	
+                    		file_count++;	
 			} 
 		}
 	}
@@ -64,7 +64,7 @@ void generate_2D_histogram_from_branch(const char *dirname="/home/guy/software/g
 		std::cout << pngFile2 << std::endl;
 		
 		// Create a 2D histogram (1000x1000 bins, with ranges for both axes), set the scale for the 2D axis here
-		TH2F *hist2d = new TH2F("hist2d", detStat, 100, -50, 50, 100, -50, 50);
+		TH2F *hist2d = new TH2F("hist2d", detStat, 50, -10, 10, 50, -10, 10);
 
 		// Set branch addresses, replace with respective branch names
 		tree->SetBranchAddress("X", &branch1_value);  
