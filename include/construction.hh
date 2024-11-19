@@ -8,10 +8,13 @@
 #include "G4LogicalVolume.hh"
 #include "G4Box.hh"
 #include "G4Tubs.hh"
+#include "G4Trap.hh"
+#include "G4Para.hh"
 #include "G4PVPlacement.hh"
 #include "G4NistManager.hh"
 #include "G4VisAttributes.hh"
 #include "G4Colour.hh"
+#include "G4RotationMatrix.hh"
 
 #include "G4GenericMessenger.hh"
 
@@ -33,6 +36,7 @@ private:
 	G4VPhysicalVolume *physWorld, *physDD, *physSD, *physID, *physFinger;
 	G4LogicalVolume *logicSD, *logicID, *logicDD, *logicFinger;
 	G4Box *solidWorld, *solidDD, *solidSD, *solidFinger;
+	//G4Para *logicID;
 	
 	G4Tubs *solidID;
 	G4LogicalVolume *logicWorld;

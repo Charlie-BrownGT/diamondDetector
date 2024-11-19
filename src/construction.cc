@@ -16,7 +16,7 @@ MyDetectorConstruction::MyDetectorConstruction()
 	hMessenger = new G4GenericMessenger(this, "/DDSize/", "DD size in x and y(mm)");
 	hMessenger->DeclareProperty("DDSize", DDSize, "Size of DD in x and y(mm)");
 	
-	SD = 0, ID = 0, DD = 1;
+	SD = 0, ID = 1, DD = 1;
 	iMessenger = new G4GenericMessenger(this, "/DetectorsOnOrOff/", "Detector status");
 	iMessenger->DeclareProperty("SD", SD, "SD on = 1, off = 0"); 
 	iMessenger->DeclareProperty("ID", ID, "ID on = 1, off = 0"); 
@@ -82,7 +82,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	
 	G4double diamondZ = 0.25*mm;
 	G4ThreeVector DDposition(0., 0., DDPositionz);
-	G4ThreeVector IDposition(0., 0., 118.5*cm); //ID hz = 10cm
+	//G4ThreeVector IDposition(0., 0., 118.5*cm); //ID hz = 10cm
 	//G4ThreeVector fingerPosition(0.195*m, 0, FingerPositionZ);
 	G4ThreeVector fingerPosition(0.0*m, 0, FingerPositionZ);
 	G4double physSDz = 1.49*m;
@@ -92,7 +92,6 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	logicWorld = new G4LogicalVolume(solidWorld, vacuum, "logicWorld");
 	physWorld = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicWorld, "physWorld", 0, false, 0, true);
 	
-	
 	solidDD = new G4Box("solidDD", DDSizexy, DDSizexy, diamondZ);
 	logicDD = new G4LogicalVolume(solidDD, YAPCe, "logicDD");
 	G4VisAttributes* visAttributesDD = new G4VisAttributes(G4Colour(0.0, 1.0, 0.0)); // Green color
@@ -101,17 +100,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	//logicDD->SetVisAttributes(visAttributesDD);
 	physDD = new G4PVPlacement(0, DDposition, logicDD, "physDD", logicWorld, false, 0, true);
 	
-
 	/*
-	solidDD = new G4Box("solidDD", DDSizexy/nRows, DDSizexy/nCols, diamondZ);
-	logicDD = new G4LogicalVolume(solidDD, YAPCe, "logicDD");
-	for(G4int i = 0; i < nRows; i++){
-		for(G4int j = 0; j < nCols; j++){
-			physDD = new G4PVPlacement(0, G4ThreeVector(-DDSizexy*0.5*mm+(i+0.5)*mm/nRows, -DDSizexy*0.5*mm+(j+0.5)*mm/nRows, DDPositionz), logicDD, "physDD", logicWorld, false, j+i*nCols, false);
-		}
-	}
-	*/
-	
 	solidID = new G4Tubs("solidID", innerRadius, outerRadius, hz, startAngle, spanningAngle);      
 	logicID = new G4LogicalVolume(solidID, CF4, "logicID");
 	G4VisAttributes* visAttributesID = new G4VisAttributes(G4Colour(1.0, 0.0, 0.0)); // Red color
@@ -119,7 +108,22 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	visAttributesID->SetForceSolid(true);
 	//logicID->SetVisAttributes(visAttributesID);
 	physID = new G4PVPlacement(0, IDposition, logicID, "physID", logicWorld, false, 0);
+	*/
 	
+	G4double dx = 5.0 * cm;  // Half-length along X-axis
+	G4double dy = 20.0 * cm;  // Half-length along Y-axis
+	G4double dz = 20.0 * cm;  // Half-length along Z-axis
+	G4double alpha = 30. * deg;  // Angle between Y-axis and the Z-side
+	G4double theta = 0. * deg;  // Tilt of Z-axis relative to global Z
+	G4double phi = 0. * deg;    // Azimuthal angle of Z-axis relative to global X
+	G4RotationMatrix* rotation = new G4RotationMatrix();  // No rotation
+	rotation->rotateY(90*deg);
+	G4ThreeVector IDposition = G4ThreeVector(0, 0, 130*cm);      // Place at origin
+
+	G4Para* solidID = new G4Para("MyPara", dx, dy, dz, alpha, theta, phi);
+	G4LogicalVolume* logicID = new G4LogicalVolume(solidID, CF4, "logicID");
+	physID = new G4PVPlacement(rotation, IDposition, logicID, "physID", logicWorld, false, 0, true);
+
 	solidSD = new G4Box("solidSD", xWorld/nRows, yWorld/nCols, 0.01*m);
 	logicSD = new G4LogicalVolume(solidSD, vacuum, "logicSD");
 	G4VisAttributes* visAttributesSD = new G4VisAttributes(G4Colour(0.0, 0.0, 1.0)); // Blue color

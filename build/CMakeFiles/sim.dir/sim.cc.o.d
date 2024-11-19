@@ -651,6 +651,8 @@ CMakeFiles/sim.dir/sim.cc.o: \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4LogicalVolume.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4Box.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4Tubs.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4Trap.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4Para.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4PVPlacement.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4NistManager.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4ICRU90StoppingData.hh \
@@ -660,6 +662,7 @@ CMakeFiles/sim.dir/sim.cc.o: \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4Exp.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4VisAttributes.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4Colour.hh \
+ /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4RotationMatrix.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4GenericMessenger.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4AnyMethod.hh \
  /home/guy/software/geant4/geant4-v11.2.2-gdml-mt-install/include/Geant4/G4AnyType.hh \
