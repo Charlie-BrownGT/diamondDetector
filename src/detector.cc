@@ -34,7 +34,5 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
 	man->FillNtupleDColumn(3, posIon[2]);
 	man->AddNtupleRow(0);
 	
-	//G4int runID = run->GetRunID();
-	
 	return true;
 }
