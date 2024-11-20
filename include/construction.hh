@@ -33,14 +33,13 @@ public:
 private:
 	
 	//defining the stuff for the user defined message
-	G4VPhysicalVolume *physWorld, *physDD, *physSD, *physID, *physFinger;
-	G4LogicalVolume *logicSD, *logicID, *logicDD, *logicFinger;
 	G4Box *solidWorld, *solidDD, *solidSD, *solidFinger;
-	
-	//G4Tubs *solidID;
 	G4Para *solidID;
-	G4LogicalVolume *logicWorld;
+	//G4Tubs *solidID;
+	G4VPhysicalVolume *physWorld, *physDD, *physSD, *physID, *physFinger;
+	G4LogicalVolume *logicSD, *logicID, *logicDD, *logicFinger, *logicWorld;
 	
+
 	G4Material *vacuum, *diamond, *CF4, *YAPCe, *FeMat;
 	G4Element *C, *F, *Y, *Ce, *Al, *O, *Fe;
 	
