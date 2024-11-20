@@ -16,7 +16,7 @@ MyDetectorConstruction::MyDetectorConstruction()
 	hMessenger = new G4GenericMessenger(this, "/DDSize/", "DD size in x and y(mm)");
 	hMessenger->DeclareProperty("DDSize", DDSize, "Size of DD in x and y(mm)");
 	
-	SD = 0, ID = 1, DD = 1;
+	SD = 0, ID = 1, DD = 0;
 	iMessenger = new G4GenericMessenger(this, "/DetectorsOnOrOff/", "Detector status");
 	iMessenger->DeclareProperty("SD", SD, "SD on = 1, off = 0"); 
 	iMessenger->DeclareProperty("ID", ID, "ID on = 1, off = 0"); 
@@ -87,6 +87,17 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	G4ThreeVector fingerPosition(0.0*m, 0, FingerPositionZ);
 	G4double physSDz = 1.49*m;
 	
+	// Definitions for ID geometry 
+	G4double dx = 5.0 * cm;  // Half-length along X-axis
+	G4double dy = 20.0 * cm;  // Half-length along Y-axis
+	G4double dz = 20.0 * cm;  // Half-length along Z-axis
+	G4double alpha = 30. * deg;  // Angle between Y-axis and the Z-side
+	G4double theta = 0. * deg;  // Tilt of Z-axis relative to global Z
+	G4double phi = 0. * deg;    // Azimuthal angle of Z-axis relative to global X
+	G4RotationMatrix* rotation = new G4RotationMatrix();
+	rotation->rotateY(90*deg);
+	G4ThreeVector IDposition = G4ThreeVector(0, 0, 130*cm);
+
 	//volumes defined here
 	solidWorld = new G4Box("solidWorld", xWorld, yWorld, zWorld);
 	logicWorld = new G4LogicalVolume(solidWorld, vacuum, "logicWorld");
@@ -109,20 +120,11 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 	//logicID->SetVisAttributes(visAttributesID);
 	physID = new G4PVPlacement(0, IDposition, logicID, "physID", logicWorld, false, 0);
 	*/
-	
-	G4double dx = 5.0 * cm;  // Half-length along X-axis
-	G4double dy = 20.0 * cm;  // Half-length along Y-axis
-	G4double dz = 20.0 * cm;  // Half-length along Z-axis
-	G4double alpha = 30. * deg;  // Angle between Y-axis and the Z-side
-	G4double theta = 0. * deg;  // Tilt of Z-axis relative to global Z
-	G4double phi = 0. * deg;    // Azimuthal angle of Z-axis relative to global X
-	G4RotationMatrix* rotation = new G4RotationMatrix();  // No rotation
-	rotation->rotateY(90*deg);
-	G4ThreeVector IDposition = G4ThreeVector(0, 0, 130*cm);      // Place at origin
 
-	G4Para* solidID = new G4Para("MyPara", dx, dy, dz, alpha, theta, phi);
-	G4LogicalVolume* logicID = new G4LogicalVolume(solidID, CF4, "logicID");
+	solidID = new G4Para("solidID", dx, dy, dz, alpha, theta, phi);
+	logicID = new G4LogicalVolume(solidID, CF4, "logicID");
 	physID = new G4PVPlacement(rotation, IDposition, logicID, "physID", logicWorld, false, 0, true);
+
 
 	solidSD = new G4Box("solidSD", xWorld/nRows, yWorld/nCols, 0.01*m);
 	logicSD = new G4LogicalVolume(solidSD, vacuum, "logicSD");
@@ -135,6 +137,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 			physSD = new G4PVPlacement(0, G4ThreeVector(-0.5*m+(i+0.5)*m/nRows, -0.5*m+(j+0.5)*m/nCols, physSDz), logicSD, "physSD", logicWorld, false, j+i*nCols, false);
 		}
 	}
+	
 
 	/*
 	//solidFinger = new G4Box("solidFinger", 0.2*m, 0.005*m, 0.001*m);

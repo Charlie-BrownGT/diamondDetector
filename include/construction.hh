@@ -36,9 +36,9 @@ private:
 	G4VPhysicalVolume *physWorld, *physDD, *physSD, *physID, *physFinger;
 	G4LogicalVolume *logicSD, *logicID, *logicDD, *logicFinger;
 	G4Box *solidWorld, *solidDD, *solidSD, *solidFinger;
-	//G4Para *logicID;
 	
-	G4Tubs *solidID;
+	//G4Tubs *solidID;
+	G4Para *solidID;
 	G4LogicalVolume *logicWorld;
 	
 	G4Material *vacuum, *diamond, *CF4, *YAPCe, *FeMat;
