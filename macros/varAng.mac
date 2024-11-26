@@ -1,11 +1,11 @@
 /DDPos/DDPosition 100
 /DDPos2/DDPosition 100
-/DDSize/DDSize 50.
-/DDSize2/DDSize 50.
-/DetectorsOnOrOff/ID 1
-/DetectorsOnOrOff2/ID 1
-/DetectorsOnOrOff/DD 0
-/DetectorsOnOrOff2/DD 0
+/DDSize/DDSize 15.
+/DDSize2/DDSize 15.
+/DetectorsOnOrOff/ID 0
+/DetectorsOnOrOff2/ID 0
+/DetectorsOnOrOff/DD 1
+/DetectorsOnOrOff2/DD 1
 /run/reinitializeGeometry
 
 # use there variables to changes the angular beam spread
@@ -38,5 +38,5 @@
 /gps/ang/rot2 1 0 0
 
 
-/control/loop varAngExt.mac theta 0 5. 1.
+/control/loop varAngExt.mac theta 0 1. 0.5
 /control/execute vis.mac

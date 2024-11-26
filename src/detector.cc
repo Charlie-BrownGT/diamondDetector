@@ -16,7 +16,7 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
 	G4StepPoint *postStepPoint = aStep->GetPostStepPoint();
 	
 	G4ThreeVector posIon = preStepPoint->GetPosition();
-	G4cout << "Ion position: " << posIon << G4endl;
+	//G4cout << "Ion position: " << posIon << G4endl;
 	
 	const G4VTouchable *touchable = aStep->GetPreStepPoint()->GetTouchable();
 	G4int copyNo = touchable->GetCopyNumber();
